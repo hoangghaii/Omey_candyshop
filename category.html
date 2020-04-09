@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" href="images/logo.ico">
+    <title>Omely shop</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="preloading">
+
+    <!--- Loading page --->
+    <div class="load" id="loading">
+        <img src="images/loading.gif">
+    </div>
+    <!--- #End loading page --->
+
+    <!--- Scroll bar --->
+    <div class="scroll-container">
+        <div class="scroll-bar" id="myBar"></div>
+    </div>
+    <!--- #End scroll bar --->
+
+    <!--- Header --->
+    <header>
+        <!--- Contact --->
+        <div class="wow bounceInLeft contact-container" data-wow-duration="1s">
+            <div class="container">
+                <div class="contact-header float-left">
+                    <i class="fa fa-phone-alt"><span class="phone"> 0964.226.542</span></i>
+                    <i class="fa fa-envelope-o"><span class="gmail"> nguyenhoanghai861@gmail.com</span></i>
+                    <i class="fa fa-facebook"></i>
+                    <i class="fa fa-instagram"></i>
+                    <i class="fa fa-twitter"></i>
+                    <i class="fa fa-google-plus"></i>
+                </div>
+                <div class="registration float-right">
+                    <a href="#" class="signIn" data-text="Cart">Cart</a>
+                </div>
+            </div>
+        </div>
+        <!--- #End contact --->
+
+        <!--- Menu --->
+        <div class="menu wow bounceInRight" data-wow-duration="1s">
+            <div class="container">
+                <!--- Logo --->
+                <div class="logo float-left">
+                    <a href="index.html"><img src="images/Omely-logo-withtext.png" alt="" class="img-fluid" /></a>
+                </div>
+                <!--- #End logo --->
+
+                <!--- Menu and submenu --->
+                <div class="menu-left">
+                    <ul class="nav-list">
+                        <li>
+                            <a href="#" class="about">Bánh
+                                <i class="fa fa-angle-down" aria-hidden="true"></i>
+                            </a>
+                            <ul class="sub-menu">
+                                <li><a href="#">Bánh Quy</a></li>
+                                <li><a href="#">Bánh Gạo</a></li>
+                                <li><a href="#">Bánh Sicula</a></li>
+                                <li><a href="#">Bánh Xốp</a></li>
+                                <li><a href="#">Bánh Khác</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="course">Kẹo
+                                <i class="fa fa-angle-down" aria-hidden="true"></i>
+                            </a>
+                            <ul class="sub-menu">
+                                <li><a href="#">Kẹo Mềm/Dẻo</a></li>
+                                <li><a href="#">Kẹo Cứng</a></li>
+                                <li><a href="#">Kẹo Sicula</a></li>
+                                <li><a href="#">Kẹo Khác</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="">Đồ uống</a>
+                        </li>
+                        <li>
+                            <a href="#" class="end">Thực phẩm khác
+                                <i class="fa fa-angle-down" aria-hidden="true"></i>
+                            </a>
+                            <ul class="sub-menu">
+                                <li><a href="#">Hạt Khô</a></li>
+                                <li><a href="#">Trái Cây Khô</a></li>
+                                <li><a href="#">Rau Củ Khô</a></li>
+                                <li><a href="#">Thực Phẩm Chức Năng</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="move-right">Blog</a>
+                        </li>
+                    </ul>
+                </div>
+                <!--- #End menu and submenu --->
+
+                <!--- Search and shopping bag container --->
+                <div class="search-shopping float-right d-flex">
+                    <div class='search-box float-right'>
+                        <input type="text" name="" id="input" class="search-txt" placeholder="Bạn muốn tìm gì ?">
+                        <a href="#" class="search-btn">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                        </a>
+                    </div>
+
+                    <a href="#" class="shopping-btn float-right">
+                        <i class="fas fa-shopping-bag"></i>
+                    </a>
+                </div>
+                <!--- #End search and shopping bag container --->
+            </div>
+        </div>
+        <!--- #End menu --->
+    </header>
+
+    <section class="cate-banner">
+        <div class="bg"></div>
+        <div class="title">Category???</div>
+    </section>
+
+    <section class="cate-content">
+        <div class="container">
+            <div class="cate-header">
+                <i class="fas fa-quote-left"></i>
+                Shop bánh kẹo Omely – Candy & Snack Shop với rất nhiều loại bánh thơm ngon,
+                bổ dưỡng và đầy đủ mùi vị phù hợp với khẩu vị của nhiều người.
+                Có nhiều loại bánh như:
+                <a href="#">Bánh quy, </a>
+                <a href="#">bánh xốp, </a>
+                <a href="#">bánh sicula, </a>
+                <a href="#">bánh mì, </a>
+                <a href="#">bánh gạo.</a>
+                <i class="fas fa-quote-right"></i>
+            </div>
+            <div class="cate-container">
+                <div class="cate-left">
+                    <div class="cate-sort">
+                        <label for="sort">Sắp xếp theo:</label>
+                        <select id="sort">
+                            <option value="" style="display: none;">---- Select a type ----</option>
+                            <option value="lastest">Mới nhất</option>
+                            <option value="lowtohight">Thứ tự theo giá: thấp đến cao</option>
+                            <option value="highttolow">Thứ tự theo giá: cao xuống thấp</option>
+                        </select>
+                    </div>
+                    <hr>
+                    <div class="cate-left_content">
+                        <div class="row">
+                            <div class="col-4">
+                                <div class="__1prod">
+                                    <div class="img-prod">
+                                        <img src="images/prod1.jpg" alt="" class="img-fluid">
+                                        <a href="#" class="sale">
+                                            <i class="fas fa-shopping-bag">
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                            </i>
+                                        </a>
+                                    </div>
+                                    <a href="#" class="prod-heading">Ô mai tắc</a>
+                                    <div class="prod-star">
+                                        <ul>
+                                            <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                            <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                            <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                            <li><i class="fa fa-star-half" aria-hidden="true"></i></li>
+                                            <div class="evaluate"> ( 50 đánh giá )</div>
+                                        </ul>
+                                    </div>
+                                    <div class="prod-price">79.000đ</div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="__1prod">
+                                    <div class="img-prod">
+                                        <img src="images/prod1.jpg" alt="" class="img-fluid">
+                                        <a href="#" class="sale">
+                                            <i class="fas fa-shopping-bag">
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                            </i>
+                                        </a>
+                                    </div>
+                                    <a href="#" class="prod-heading">Ô mai tắc</a>
+                                    <div class="prod-star">
+                                        <ul>
+                                            <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                            <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                            <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                            <li><i class="fa fa-star-half" aria-hidden="true"></i></li>
+                                            <div class="evaluate"> ( 50 đánh giá )</div>
+                                        </ul>
+                                    </div>
+                                    <div class="prod-price">79.000đ</div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="__1prod">
+                                    <div class="img-prod">
+                                        <img src="images/prod1.jpg" alt="" class="img-fluid">
+                                        <a href="#" class="sale">
+                                            <i class="fas fa-shopping-bag">
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                            </i>
+                                        </a>
+                                    </div>
+                                    <a href="#" class="prod-heading">Ô mai tắc</a>
+                                    <div class="prod-star">
+                                        <ul>
+                                            <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                            <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                            <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                            <li><i class="fa fa-star-half" aria-hidden="true"></i></li>
+                                            <div class="evaluate"> ( 50 đánh giá )</div>
+                                        </ul>
+                                    </div>
+                                    <div class="prod-price">79.000đ</div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="__1prod">
+                                    <div class="img-prod">
+                                        <img src="images/prod1.jpg" alt="" class="img-fluid">
+                                        <a href="#" class="sale">
+                                            <i class="fas fa-shopping-bag">
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                            </i>
+                                        </a>
+                                    </div>
+                                    <a href="#" class="prod-heading">Ô mai tắc</a>
+                                    <div class="prod-star">
+                                        <ul>
+                                            <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                            <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                            <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                            <li><i class="fa fa-star-half" aria-hidden="true"></i></li>
+                                            <div class="evaluate"> ( 50 đánh giá )</div>
+                                        </ul>
+                                    </div>
+                                    <div class="prod-price">79.000đ</div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="__1prod">
+                                    <div class="img-prod">
+                                        <img src="images/prod1.jpg" alt="" class="img-fluid">
+                                        <a href="#" class="sale">
+                                            <i class="fas fa-shopping-bag">
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                            </i>
+                                        </a>
+                                    </div>
+                                    <a href="#" class="prod-heading">Ô mai tắc</a>
+                                    <div class="prod-star">
+                                        <ul>
+                                            <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                            <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                            <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                            <li><i class="fa fa-star-half" aria-hidden="true"></i></li>
+                                            <div class="evaluate"> ( 50 đánh giá )</div>
+                                        </ul>
+                                    </div>
+                                    <div class="prod-price">79.000đ</div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="__1prod">
+                                    <div class="img-prod">
+                                        <img src="images/prod1.jpg" alt="" class="img-fluid">
+                                        <a href="#" class="sale">
+                                            <i class="fas fa-shopping-bag">
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                            </i>
+                                        </a>
+                                    </div>
+                                    <a href="#" class="prod-heading">Ô mai tắc</a>
+                                    <div class="prod-star">
+                                        <ul>
+                                            <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                            <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                            <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                            <li><i class="fa fa-star-half" aria-hidden="true"></i></li>
+                                            <div class="evaluate"> ( 50 đánh giá )</div>
+                                        </ul>
+                                    </div>
+                                    <div class="prod-price">79.000đ</div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="__1prod">
+                                    <div class="img-prod">
+                                        <img src="images/prod1.jpg" alt="" class="img-fluid">
+                                        <a href="#" class="sale">
+                                            <i class="fas fa-shopping-bag">
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                            </i>
+                                        </a>
+                                    </div>
+                                    <a href="#" class="prod-heading">Ô mai tắc</a>
+                                    <div class="prod-star">
+                                        <ul>
+                                            <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                            <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                            <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                            <li><i class="fa fa-star-half" aria-hidden="true"></i></li>
+                                            <div class="evaluate"> ( 50 đánh giá )</div>
+                                        </ul>
+                                    </div>
+                                    <div class="prod-price">79.000đ</div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="__1prod">
+                                    <div class="img-prod">
+                                        <img src="images/prod1.jpg" alt="" class="img-fluid">
+                                        <a href="#" class="sale">
+                                            <i class="fas fa-shopping-bag">
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                            </i>
+                                        </a>
+                                    </div>
+                                    <a href="#" class="prod-heading">Ô mai tắc</a>
+                                    <div class="prod-star">
+                                        <ul>
+                                            <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                            <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                            <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                            <li><i class="fa fa-star-half" aria-hidden="true"></i></li>
+                                            <div class="evaluate"> ( 50 đánh giá )</div>
+                                        </ul>
+                                    </div>
+                                    <div class="prod-price">79.000đ</div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="__1prod">
+                                    <div class="img-prod">
+                                        <img src="images/prod1.jpg" alt="" class="img-fluid">
+                                        <a href="#" class="sale">
+                                            <i class="fas fa-shopping-bag">
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                            </i>
+                                        </a>
+                                    </div>
+                                    <a href="#" class="prod-heading">Ô mai tắc</a>
+                                    <div class="prod-star">
+                                        <ul>
+                                            <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                            <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                            <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                            <li><i class="fa fa-star-half" aria-hidden="true"></i></li>
+                                            <div class="evaluate"> ( 50 đánh giá )</div>
+                                        </ul>
+                                    </div>
+                                    <div class="prod-price">79.000đ</div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="__1prod">
+                                    <div class="img-prod">
+                                        <img src="images/prod1.jpg" alt="" class="img-fluid">
+                                        <a href="#" class="sale">
+                                            <i class="fas fa-shopping-bag">
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                            </i>
+                                        </a>
+                                    </div>
+                                    <a href="#" class="prod-heading">Ô mai tắc</a>
+                                    <div class="prod-star">
+                                        <ul>
+                                            <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                            <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                            <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                            <li><i class="fa fa-star-half" aria-hidden="true"></i></li>
+                                            <div class="evaluate"> ( 50 đánh giá )</div>
+                                        </ul>
+                                    </div>
+                                    <div class="prod-price">79.000đ</div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="__1prod">
+                                    <div class="img-prod">
+                                        <img src="images/prod1.jpg" alt="" class="img-fluid">
+                                        <a href="#" class="sale">
+                                            <i class="fas fa-shopping-bag">
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                            </i>
+                                        </a>
+                                    </div>
+                                    <a href="#" class="prod-heading">Ô mai tắc</a>
+                                    <div class="prod-star">
+                                        <ul>
+                                            <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                            <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                            <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                            <li><i class="fa fa-star-half" aria-hidden="true"></i></li>
+                                            <div class="evaluate"> ( 50 đánh giá )</div>
+                                        </ul>
+                                    </div>
+                                    <div class="prod-price">79.000đ</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cate-right">
+                    <h3 class="cate-right_title">Danh mục sản phẩm</h3>
+                    <hr>
+                    <ul class="cate-nav-list">
+                        <li>
+                            <a href="#">
+                                Bánh
+                                <i class="fa fa-angle-down" aria-hidden="true"></i>
+                            </a>
+                            <ul class="cate-sub-menu">
+                                <li><a href="#">Bánh Quy</a></li>
+                                <li><a href="#">Bánh Gạo</a></li>
+                                <li><a href="#">Bánh Sicula</a></li>
+                                <li><a href="#">Bánh Xốp</a></li>
+                                <li><a href="#">Bánh Khác</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Kẹo
+                                <i class="fa fa-angle-down" aria-hidden="true"></i>
+                            </a>
+                            <ul class="cate-sub-menu">
+                                <li><a href="#">Kẹo Mềm/Dẻo</a></li>
+                                <li><a href="#">Kẹo Cứng</a></li>
+                                <li><a href="#">Kẹo Sicula</a></li>
+                                <li><a href="#">Kẹo Khác</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Đồ uống</a></li>
+                        <li>
+                            <a href="#">
+                                Thực phẩm khác
+                                <i class="fa fa-angle-down" aria-hidden="true"></i>
+                            </a>
+                            <ul class="cate-sub-menu">
+                                <li><a href="#">Hạt Khô</a></li>
+                                <li><a href="#">Trái Cây Khô</a></li>
+                                <li><a href="#">Rau Củ Khô</a></li>
+                                <li><a href="#">Thực Phẩm Chức Năng</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="info">
+            <div class="container">
+                <div class="wrapper-left">
+                    <img src="images/logo-footer.png" alt="">
+                    <div class="content-left">
+                        Omely - Candy & Snack Shop | Cửa hàng bánh kẹo nhập khẩu tại Tp. HCM với các sản phẩm từ Thái,
+                        Nhật,
+                        Hàn, Malaysia, Indonesia, USA, Đức,...
+                    </div>
+                    <div class="content-left">- Giờ mở cửa: T2-CN (9h30 - 21h30)</div>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <i class="fab fa-facebook-f"></i>
+                                <span class="wrapper-left_tooltip">Facebook</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fab fa-instagram"></i>
+                                <span class="wrapper-left_tooltip">Instagram</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fab fa-twitter"></i>
+                                <span class="wrapper-left_tooltip">Twitter</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="wrapper-centerleft">
+                    <div class="info-heading">Liên hệ</div>
+                    <ul>
+                        <li>
+                            <i class="fa fa-location-arrow" aria-hidden="true"></i>
+                            326/32/4 Lê Hồng Phong, Tp.Nha Trang, Tỉnh Khánh Hòa
+                        </li>
+                        <li>
+                            <i class="fa fa-phone-alt"></i>
+                            0964.226.542
+                        </li>
+                        <li>
+                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                            Gmail-example@gmail.com
+                        </li>
+                    </ul>
+                </div>
+                <div class="wrapper-centerright">
+                    <div class="info-heading">Omely shop</div>
+                    <ul>
+                        <li><a href="#">Giới thiệu</a></li>
+                        <li><a href="#">Sản phẩm</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Tuyển dụng</a></li>
+                        <li><a href="#">Chính sách sử dụng</a></li>
+                    </ul>
+                </div>
+                <div class="wrapper-right">
+                    <div class="info-heading">Bài viết</div>
+                    <ul>
+                        <li>
+                            <!-- <span class="wrap-right_img"> -->
+                            <img src="images/blog1.jpg" alt="">
+                            <!-- </span> -->
+                            <a href="#">
+                                2 cách làm kẹo Nougat tại nhà béo núng na
+                                núng nính như mỡ bụng của bạn.
+                            </a>
+                        </li>
+                        <li>
+                            <!-- <span class="wrap-right_img"> -->
+                            <img src="images/blog1.jpg" alt="">
+                            <!-- </span> -->
+                            <a href="#">
+                                2 cách làm kẹo Nougat tại nhà béo núng na
+                                núng nính như mỡ bụng của bạn.
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <div>
+                © 2020 <span>Omely - Candy house</span> . All rights reserved | Design by
+                <a href="https://www.facebook.com/profile.php?id=100006885991030">
+                    Nguyễn Hoàng Hải
+                </a>
+            </div>
+        </div>
+
+        <div class="gotop">TOP</div>
+    </footer>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/9f92915eda.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
