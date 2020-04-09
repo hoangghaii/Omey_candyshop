@@ -210,19 +210,20 @@ body {
 /* --- Logo --- */
 
 .menu {
-    transition: .7s height;
     position: relative;
+    height: 86px;
 }
+
 
 .menuscroll {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 8;
+    z-index: 10;
     border-bottom-width: 2.5px;
     background: var(--white-color);
-    height: 85px;
+    height: 86px;
     padding-top: .15rem;
 }
 
@@ -237,7 +238,7 @@ body {
 }
 
 .logo {
-    padding: .5rem 0;
+    padding: .6rem 0;
 }
 
 .logo img {
@@ -257,7 +258,7 @@ body {
     justify-content: space-around;
     width: 100%;
     position: absolute;
-    top: 0;
+    top: 3px;
 }
 
 .nav-list>li {
@@ -312,7 +313,7 @@ body {
     border-top: 2px solid var(--pink-color2);
     background: var(--white-color);
     z-index: 9;
-    top: 10rem;
+    top: 8rem;
     left: -12px;
     opacity: 0;
     visibility: hidden;
@@ -325,9 +326,13 @@ body {
     visibility: visible;
 }
 
+.nav-list li:hover>.sub-menu.scroll {
+    top: 5rem;
+}
+
 .search-box {
     position: relative;
-    top: 1.3rem;
+    top: 1.4rem;
     height: 40px;
     padding: 10px;
     background: #d4f8e8;
@@ -384,7 +389,7 @@ body {
 
 .shopping-bag {
     position: relative;
-    top: 1.3rem;
+    top: 1.4rem;
     width: 40px;
     height: 40px;
     padding: 11px;
@@ -1409,9 +1414,10 @@ body {
     position: absolute;
     top: 0;
     left: 0;
+    z-index: 0;
     background: url(https://shopomely.com/wp-content/uploads/2020/01/bg-breadcrumb-3-1.jpg);
-    background-position: 10px -30px;
-    background-size: 100% auto;
+    background-position: 40px -30px;
+    background-size: 100%;
     background-attachment: fixed;
 }
 
@@ -1421,8 +1427,8 @@ body {
     left: 45%;
     font-family: var(--font4);
     font-size: 2rem;
-    letter-spacing: 1px;
-    color: var(--white-color);
+    letter-spacing: 2px;
+    color: #f1f2f6;
 }
 
 /* --- Category content --- */
@@ -1436,8 +1442,7 @@ body {
     font-size: 1.25rem;
     letter-spacing: 1.25px;
     color: var(--font-color);
-    line-height: 2rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     color: #F06292;
 }
 
@@ -1449,7 +1454,7 @@ body {
 
 .cate-content .cate-header a {
     color: #F06292;
-    width: fit-content;
+    display: inline-block;
     position: relative;
 }
 
@@ -1458,17 +1463,72 @@ body {
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 89%;
+    width: 100%;
     height: 2px;
     background: #F06292;
     transform: scaleX(0);
-    transform-origin: bottom left;
-    transition: all .5s;
+    transform-origin: right bottom;
+    transition-duration: .3s;
+    transition: transform .5s ease;
 }
 
 .cate-content .cate-header a:hover::after {
     transform: scaleX(1);
-    transform-origin: bottom right;
+    transform-origin: left bottom;
+}
+
+.breadcrumbs {
+    margin: 1.5rem 0 1rem;
+}
+
+.breadcrumbs__item {
+    display: inline-block;
+}
+
+.breadcrumbs__item:not(:last-of-type)::after {
+    content: "/";
+    margin: 0 5px;
+    color: #747d8c;
+}
+
+.breadcrumbs__link {
+    font-family: var(--font4);
+    font-size: 1.05rem;
+    letter-spacing: 1.2px;
+    color: #747d8c;
+    position: relative;
+}
+
+.breadcrumbs__link:hover {
+    color: #747d8c;
+}
+
+.breadcrumbs__link--active {
+    color: #16a085;
+}
+
+.breadcrumbs__link--active:hover {
+    color: #16a085;
+}
+
+.breadcrumbs__link::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #747d8c;
+    transform: scale(0);
+    transition: transform .5s;
+}
+
+.breadcrumbs__link--active::after {
+    background: #16a085;
+}
+
+.breadcrumbs__link:hover::after {
+    transform: scale(1);
 }
 
 .cate-content .cate-container {
@@ -1565,7 +1625,7 @@ body {
 
 .cate-nav-list a {
     color: var(--font-color);
-    transition: color 650ms;
+    transition: color .6s;
 }
 
 .cate-nav-list a:hover {
@@ -1583,7 +1643,7 @@ body {
     font-size: 1rem;
     position: relative;
     padding-left: 0;
-    transition: padding-left 650ms;
+    transition: padding-left .6s;
 }
 
 .cate-sub-menu a::before {
@@ -1593,7 +1653,7 @@ body {
     opacity: 0;
     visibility: hidden;
     transform: scale(0);
-    transition: all 650ms;
+    transition: all .6s;
 }
 
 .cate-sub-menu a:hover {

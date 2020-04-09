@@ -6,6 +6,7 @@ $(function () {
         $('#loading').delay(100).fadeOut('slow');
     });
 
+    /** --- Scroll bar --- */
     $(window).on("scroll", function () {
         var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
         var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
@@ -17,13 +18,11 @@ $(function () {
     $(window).scroll(function () {
         var vitri = $('html').scrollTop();
         if (vitri >= 180) {
-            $('.menu').slideDown('slow', function () {
-                $(this).addClass('menuscroll');
-            });
-            // $('.nav-list > li > a').addClass('scroll');
+            $('.menu').addClass('menuscroll');
+            $('.sub-menu').addClass('scroll');
         } else if (vitri < 180) {
             $('.menu').removeClass('menuscroll');
-            // $('.nav-list > li > a').removeClass('scroll');
+            $('.sub-menu').removeClass('scroll');
         }
     });
 
