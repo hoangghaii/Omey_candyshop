@@ -69,6 +69,15 @@ $(function () {
         e.preventDefault();
     });
 
+    $('.prod-footer__title a').click(function (e) {
+        let target = $(this).attr("href");
+        $('.prod-footer__content--prod').hide('slow');
+        $(target).show('slow');
+        $('.prod-footer__title a').removeClass('active');
+        $(this).addClass('active');
+        e.preventDefault();
+    });
+
     /** --- Owl carosel --- */
     $('.brand-carousel').slick({
         autoplay: true,
@@ -132,6 +141,5 @@ $(function () {
             scrollTop: 0
         }, 1000);
     });
-})
 
-
+});

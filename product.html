@@ -10,6 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/normalize.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/exzoom.min.css">
     <link rel="stylesheet" href="css/slick.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -128,39 +129,99 @@
         <div class="title">Product???</div>
     </section>
 
-    <section class="cate-content">
+    <section class="cate-content prod-content">
         <div class="container">
+            <ul class="breadcrumbs">
+                <li class="breadcrumbs__item">
+                    <a href="#" class="breadcrumbs__link">Trang chủ</a>
+                </li>
+                <li class="breadcrumbs__item">
+                    <a href="#" class="breadcrumbs__link">Bánh sicula</a>
+                </li>
+                <li class="breadcrumbs__item">
+                    <a href="#" class="breadcrumbs__link breadcrumbs__link--active">Bánh sicula siêu ngon</a>
+                </li>
+            </ul>
+
             <div class="cate-container">
                 <div class="cate-left">
-                    <div class="cate-left_content">
-                        <div class="row">
-                            <div class="col-4">
-                                <div class="__1prod">
-                                    <div class="img-prod">
-                                        <img src="images/prod1.jpg" alt="" class="img-fluid">
-                                        <a href="#" class="sale">
-                                            <i class="fas fa-shopping-bag">
-                                                <span></span>
-                                                <span></span>
-                                                <span></span>
-                                                <span></span>
-                                                <span></span>
-                                                <span></span>
-                                            </i>
-                                        </a>
-                                    </div>
-                                    <a href="#" class="prod-heading">Ô mai tắc</a>
-                                    <div class="prod-star">
-                                        <ul>
-                                            <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                            <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                            <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                            <li><i class="fa fa-star-half" aria-hidden="true"></i></li>
-                                            <div class="evaluate"> ( 50 đánh giá )</div>
-                                        </ul>
-                                    </div>
-                                    <div class="prod-price">79.000đ</div>
+                    <div class="prod-wrapper">
+                        <div class="prod-left">
+                            <div class="exzoom" id="exzoom">
+                                <div class="exzoom_img_box">
+                                    <ul class='exzoom_img_ul'>
+                                        <li><img src="images/prod1.jpg" /></li>
+                                        <li><img src="images/prod1.jpg" /></li>
+                                        <li><img src="images/prod1.jpg" /></li>
+                                        <li><img src="images/prod1.jpg" /></li>
+                                    </ul>
                                 </div>
+                                <div class="exzoom_nav"></div>
+                            </div>
+                        </div>
+                        <div class="prod-right">
+                            <div href="#" class="prod-name">Ô mai tắc</div>
+                            <div class="prod-rating">
+                                <div class="rating">
+                                    <input type="radio" name="star" id="star1"><label for="star1"></label>
+                                    <input type="radio" name="star" id="star2"><label for="star2"></label>
+                                    <input type="radio" name="star" id="star3"><label for="star3"></label>
+                                    <input type="radio" name="star" id="star4"><label for="star4"></label>
+                                    <input type="radio" name="star" id="star5"><label for="star5"></label>
+                                </div>
+                                <a href="#" class="rating-link">80 đánh giá</a>
+                            </div>
+                            <div class="prod-decription">
+                                Hộp quà được thiết kế rất sang trọng và đẹp mắt, phù hợp làm quà tặng Tết cho người
+                                thân, bạn bè...
+                            </div>
+                            <div class="price">79.000đ</div>
+                            <div class="quantity__card">
+                                <input type="number" name="" id="prod-quantity" value="1" step="1" min="1" max="99"
+                                    readonly>
+                                <a href="#" class="prod-cart">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    Mua hàng
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="prod-footer">
+                        <div class="prod-footer__title">
+                            <a href="#prod-footer__content--desc" class="active">Mô tả</a>
+                            <a href="#prod-footer__content--info">Thông tin sản phẩm</a>
+                        </div>
+                        <div class="prod-footer__content">
+                            <div class="prod-footer__content--prod active" id="prod-footer__content--desc">
+                                <p>
+                                    Ô mai tắc là một loại mứt được sử dụng vào các dịp Tết khi cả nhà sum họp gia đình ,
+                                    ăn ô mai phải uống với ngụm trà mới thấm được cái sự ngon của nó, ăn ô mai tắc giúp
+                                    tinh thần ta thoải mái và tỉnh táo.. Vị ô mai hòa dịu bên trong cuốn họng ta rất
+                                    thoải mái và dể chịu ❤️❤️❤️.
+                                </p>
+                            </div>
+                            <div class="prod-footer__content--prod" id="prod-footer__content--info">
+                                <table>
+                                    <tr>
+                                        <th>Cân Nặng</th>
+                                        <td>700 g</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Đơn Vị Tính</th>
+                                        <td>Túi</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Xuất xứ</th>
+                                        <td>Việt Nam</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Khối lượng tịnh</th>
+                                        <td>500g</td>
+                                    </tr>
+                                </table>
                             </div>
                         </div>
                     </div>
@@ -210,8 +271,21 @@
                     </ul>
                 </div>
             </div>
+
+        </div>
+
+    </section>
+
+    <div class="container">
+        <hr>
+    </div>
+
+    <section class="about">
+        <div class="container">
+            abcd1234
         </div>
     </section>
+
 
     <footer>
         <div class="info">
@@ -311,9 +385,32 @@
 
     <script src="js/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/9f92915eda.js"></script>
+    <script src="js/number.js"></script>
     <script src="js/slick.min.js"></script>
     <script src="js/wow.min.js"></script>
+    <script src="js/exzoom.min.js"></script>
     <script src="js/script.js"></script>
+
+    <script>
+        $('input[type="number"]').number({
+            'containerClass': 'number-style',
+            'minus': 'number-minus',
+            'plus': 'number-plus',
+            'containerTag': 'div',
+            'btnTag': 'span'
+        });
+
+        $(function () {
+            $("#exzoom").exzoom({
+                "navWidth": 60,
+                "navHeight": 60,
+                "navItemNum": 5,
+                "navItemMargin": 7,
+                "navBorder": 1,
+                "autoPlay": false,
+            });
+        });
+    </script>
 </body>
 
 </html>
