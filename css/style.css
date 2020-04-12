@@ -429,6 +429,102 @@ body {
     text-shadow: 0 0 5px #f67575;
 }
 
+/* --- TODO: do the do --- */
+.shopping-bag {
+    position: relative;
+}
+
+.bag-cart {
+    position: absolute;
+    top: 5.4rem;
+    right: -10px;
+    width: 18rem;
+    height: 14rem;
+    padding: .8rem;
+    z-index: 9;
+    border: 1px solid black;
+    background: var(--white-color);
+}
+
+.bag-cart.scroll {
+    top: 5.15rem;
+}
+
+.cart-prod {
+    /* padding: .8rem; */
+    display: flex;
+}
+
+.cart-prod div {
+    flex: 1;
+}
+
+.cart-prod .cart-prod__img {
+    max-width: 60px;
+    max-height: 60px;
+    display: block;
+    margin-right: 1rem;
+}
+
+.cart-prod .cart-prod__img img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.cart-prod__text {
+    word-break: break-all;
+}
+
+.bag-cart .total {
+    text-align: right;
+    display: block;
+}
+
+.bag-cart .buy {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+
+.bag-cart .go-cart {
+    display: inline-block;
+    padding: .5rem 1.5rem;
+    /* margin-right: 5px; */
+    border-radius: 30px;
+    color: var(--white-color);
+    /* font-size: 1.2em; */
+    position: relative;
+    overflow: hidden;
+    transition: color .5s;
+    z-index: 1;
+    background: var(--pink-color2);
+    border: 1px solid var(--pink-color2);
+}
+
+.bag-cart .go-cart:hover {
+    color: var(--pink-color2);
+    /* border: 1px solid var(--pink-color2); */
+}
+
+.bag-cart .go-cart::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 0%;
+    background: var(--white-color);
+    z-index: -1;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    transition: .7s all;
+}
+
+.bag-cart .go-cart:hover::before {
+    height: 260%;
+}
+
 /* --- Header --- */
 
 .header-slide {
@@ -447,7 +543,7 @@ body {
     background-image: url(https://shopomely.com/wp-content/uploads/2019/09/bg-candy2.jpg);
     background-position: center;
     background-size: 1500px;
-    animation: scrollGood 12s linear infinite;
+    animation: scrollGood 20s linear infinite;
 }
 
 @keyframes scrollGood {
@@ -682,7 +778,7 @@ body {
     position: relative;
 }
 
-.product-content-right__content__product .__1prod .img-prod .prod-badge {
+.__1prod .img-prod .prod-badge {
     position: absolute;
     top: 10px;
     right: 10px;
@@ -696,7 +792,7 @@ body {
     transition: color .7s;
 }
 
-.product-content-right__content__product .__1prod .img-prod:hover .prod-badge {
+.__1prod .img-prod:hover .prod-badge {
     color: #D81B60;
 }
 
@@ -2085,7 +2181,8 @@ body {
     color: var(--font-color);
 }
 
-.about h3 {
+.about h3,
+.prod-more h3 {
     font-family: var(--font4);
     font-size: 1.7rem;
     background: linear-gradient(var(--linear-color9));

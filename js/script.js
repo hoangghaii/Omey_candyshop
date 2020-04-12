@@ -20,9 +20,11 @@ $(function () {
         if (vitri >= 180) {
             $('.menu').addClass('menuscroll');
             $('.sub-menu').addClass('scroll');
+            $('.bag-cart').addClass('scroll');
         } else if (vitri < 180) {
             $('.menu').removeClass('menuscroll');
             $('.sub-menu').removeClass('scroll');
+            $('.bag-cart').removeClass('scroll');
         }
     });
 
