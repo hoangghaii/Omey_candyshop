@@ -157,7 +157,7 @@ body {
     line-height: 30px;
 }
 
-.contact-header i.fa {
+.contact-header i {
     padding: 0 8px;
     font-size: 1rem;
     cursor: pointer;
@@ -165,11 +165,11 @@ body {
     transition: color .5s;
 }
 
-.contact-header i.fa:hover {
+.contact-header i:hover {
     color: var(--pink-color2)
 }
 
-.contact-header i.fa span {
+.contact-header i span {
     font-family: var(--font4);
     letter-spacing: 1px;
     font-weight: 200;
@@ -278,9 +278,10 @@ body {
     transition: color .7s;
 }
 
-.nav-list>li>a i.fa {
+.nav-list>li>a i.fal {
     font-size: .8rem;
-    margin-left: -4px;
+    margin-left: -3px;
+    font-weight: 600;
 }
 
 .nav-list a:hover {
@@ -389,21 +390,9 @@ body {
     color: #f67575;
 }
 
-.shopping-bag {
-    position: relative;
-    top: 1.4rem;
-    width: 40px;
-    height: 40px;
-    padding: 11px;
-    border: 2px solid #98d6ea;
-    border-radius: 50%;
-    margin-left: 20px;
-    transition: .6s;
-}
-
 .shopping-btn {
     position: relative;
-    top: 1.3rem;
+    top: 1.4rem;
     width: 40px;
     height: 40px;
     margin-left: 20px;
@@ -1277,10 +1266,14 @@ body {
     bottom: 125%;
 }
 
-.wrapper-centerleft i.fa {
-    font-size: .9rem;
+.wrapper-centerleft i {
+    font-size: 1rem;
     color: var(--pink-color2);
     margin-right: 1rem;
+}
+
+.wrapper-centerleft li {
+    margin-bottom: .5rem;
 }
 
 .wrapper-right li {
@@ -1614,8 +1607,8 @@ body {
     margin-left: .5rem;
 }
 
-.cate-sub-menu {
-    border-left: 2.5px solid #c8d6e5;
+.cate-nav-list i {
+    margin-left: -2px;
 }
 
 .cate-nav-list li {
@@ -1629,9 +1622,6 @@ body {
     font-size: 1.1rem;
     letter-spacing: 2px;
     width: fit-content;
-}
-
-.cate-nav-list a {
     color: var(--font-color);
     transition: color .6s;
 }
@@ -1641,6 +1631,7 @@ body {
 }
 
 .cate-sub-menu {
+    border-left: 2.5px solid #c8d6e5;
     display: block;
     position: inherit;
     left: 2rem;
@@ -1655,7 +1646,9 @@ body {
 }
 
 .cate-sub-menu a::before {
-    content: "\2192";
+    content: "\f30b";
+    font-family: "Font Awesome 5 Pro";
+    font-weight: 300;
     position: absolute;
     left: 0;
     opacity: 0;
@@ -1705,7 +1698,7 @@ body {
     font-size: 1rem;
     color: #2c3e50;
     background: #e9e8e8;
-    letter-spacing: 2px;
+    letter-spacing: 1.5px;
     margin-right: .5rem;
     padding: .5rem 1.5rem;
     cursor: pointer;
@@ -2087,4 +2080,18 @@ body {
     100% {
         transform: translateY(-100%);
     }
+}
+
+.about {
+    padding: 1rem 0 3.5rem;
+}
+
+.about-contact {
+    padding: 2rem;
+    border: 2px dashed var(--pink-color2)
+}
+
+.about-contact i {
+    font-size: 1.5rem;
+    line-height: 2rem;
 }
