@@ -144,4 +144,12 @@ $(function () {
         }, 1000);
     });
 
+    /** --- Drawer Cart --- */
+    var drawerCart = document.getElementById("drawerCart");
+    var cart = document.getElementById('cart');
+    drawerCart.addEventListener("click", function (e) {
+        cart.classList.toggle("show");
+        e.preventDefault();
+    })
+
 });
