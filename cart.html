@@ -183,19 +183,21 @@
 
     <section class="table-cart">
         <div class="container">
-            <table>
+            <table class="table-prod">
                 <thead>
                     <tr>
-                        <th></th>
-                        <th>Sản phẩm</th>
-                        <th>Giá</th>
-                        <th>Số lượng</th>
-                        <th>Tổng</th>
+                        <th class="column-delete"></th>
+                        <th class="column-prod">Sản phẩm</th>
+                        <th class="column-price">Giá</th>
+                        <th class="column-quantity">Số lượng</th>
+                        <th class="column-total">Tổng</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td class="column-delete">Xóa</td>
+                        <td class="column-delete">
+                            <i class="far fa-trash-alt"></i>
+                        </td>
                         <td class="column-prod">
                             <div class="cart_prod-img">
                                 <img src="images/prod1.jpg" alt="">
@@ -213,6 +215,39 @@
                     </tr>
                 </tbody>
             </table>
+
+            <a class="update-cart" href="#0">Cập nhật giỏ hàng</a>
+            <div class="clearfix"></div>
+
+            <div class="ordering">
+                <div class="order">
+                    <div class="order-heading">Đơn hàng</div>
+                    <h3>Tổng</h3>
+                    <table class="order-calcu">
+                        <tr>
+                            <th>Tạm tính</th>
+                            <td>105.000đ</td>
+                        </tr>
+                        <tr>
+                            <th>Thành tiền</th>
+                            <td>140.000đ</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="tax">
+                    <div class="tax-heading">Ước tính</div>
+                    <h3>Vận chuyển & thuế</h3>
+                    <div class="tax-total">35.000đ</div>
+                    <a href="#0" class="tax-calcu">Tính vận chuyển</a>
+                </div>
+            </div>
+            <a href="#0" class="action-ordering">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Tiến hành thanh toán
+            </a>
         </div>
     </section>
 

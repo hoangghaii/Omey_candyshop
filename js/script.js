@@ -112,24 +112,6 @@ $(function () {
     //     });
     // }
 
-    /** --- Remove preventDefault của a herf (c2): ---  */
-    /** --- dùng jquery --- */
-    $('.more').click(function (e) {
-        e.preventDefault();
-    });
-
-    $('.blog-more').click(function (e) {
-        e.preventDefault();
-    });
-
-    $('.info a').click(function (e) {
-        e.preventDefault();
-    });
-
-    $('.search-btn').click(function (e) {
-        e.preventDefault();
-    });
-
     /** --- Scroll top ---  */
     $(window).scroll(function () {
         if ($(window).scrollTop() >= 100) {

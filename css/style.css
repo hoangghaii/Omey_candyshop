@@ -880,7 +880,7 @@ body {
 }
 
 .sale:hover {
-    color: currentColor;
+    color: var(--pink-neon-color);
 }
 
 .img-prod .sale span {
@@ -2301,7 +2301,326 @@ body {
 
 /* --- Cart.html --- */
 
-.table-cart table {
+.table-cart {
+    padding: 3rem 0;
+}
+
+.table-cart .table-prod {
     width: 100%;
-    border: 1px solid black;
+}
+
+.table-cart .table-prod th {
+    font-family: var(--font2);
+    font-size: 1.15rem;
+    color: #00BCD4;
+}
+
+.table-cart .table-prod th,
+.table-cart .table-prod td {
+    padding: .7rem .5rem;
+}
+
+.table-cart .table-prod td {
+    font-family: var(--font4);
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    color: var(--font-color)
+}
+
+.table-cart .table-prod tbody tr {
+    border: 2px solid rgba(0, 0, 0, .05);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
+    border-top: 3px solid var(--pink-color2);
+}
+
+.table-cart tbody .column-delete,
+.table-cart tbody .column-price,
+.table-cart tbody .column-total {
+    color: var(--pink-color2)
+}
+
+.table-cart tbody .column-delete {
+    width: 5%;
+    text-align: center;
+    cursor: pointer;
+}
+
+.table-cart tbody .column-delete:hover {
+    color: var(--pink-neon-color);
+}
+
+.table-cart .column-prod {
+    width: 50%;
+}
+
+.table-cart .column-prod .cart_prod-img {
+    width: 100px;
+    height: 100px;
+    float: left;
+}
+
+.table-cart .column-prod .cart_prod-img img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.table-cart .column-prod .cart_prod-name {
+    margin-left: 2rem;
+    display: inline-block;
+}
+
+.table-cart .column-price {
+    width: 12.5%;
+    text-align: center;
+}
+
+.table-cart tbody .column-total {
+    background: #FAFAFA;
+}
+
+.table-cart .column-quantity {
+    width: 20%;
+    text-align: center;
+}
+
+.table-cart .column-total {
+    width: 12.5%;
+    text-align: center;
+}
+
+.update-cart {
+    float: right;
+    font-family: var(--font4);
+    font-size: 1.03rem;
+    letter-spacing: 1px;
+    color: var(--pink-color2);
+    width: fit-content;
+    padding: .5rem 1.8rem;
+    border: 2px solid var(--pink-color2);
+    margin-top: 1.5rem;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    transition: .7s;
+}
+
+.update-cart:hover {
+    color: var(--white-color)
+}
+
+.update-cart::before {
+    content: "";
+    position: absolute;
+    left: -11%;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background: var(--pink-color2);
+    z-index: -1;
+    transform: skewX(45deg);
+    transition: .7s;
+}
+
+.update-cart:hover::before {
+    width: 150%;
+}
+
+.ordering {
+    display: flex;
+    padding: 3rem 0;
+}
+
+.ordering div {
+    flex: 1;
+}
+
+.order-heading,
+.tax-heading {
+    font-family: var(--font2);
+    font-size: .8rem;
+    text-transform: uppercase;
+    color: var(--pink-color2);
+    padding: .3rem 0;
+}
+
+.ordering h3 {
+    font-family: var(--font4);
+    font-size: 1.6rem;
+    letter-spacing: 2px;
+    color: #22a6b3;
+    width: fit-content;
+    position: relative;
+    padding: .3rem 0;
+}
+
+.ordering h3::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 10rem;
+    height: 2px;
+    background: currentColor;
+}
+
+.order-calcu {
+    width: 100%;
+    font-size: 1rem;
+}
+
+.order-calcu tr {
+    line-height: 3rem;
+}
+
+.order-calcu th {
+    font-family: var(--font2);
+    color: var(--font-color);
+}
+
+.order-calcu td {
+    font-family: var(--font4);
+    color: var(--red-color);
+    letter-spacing: 1px;
+}
+
+.tax-total {
+    font-family: var(--font4);
+    font-size: 1.07rem;
+    letter-spacing: 1px;
+    padding: .5rem 0;
+}
+
+.tax-calcu {
+    font-family: var(--font2);
+    position: relative;
+    color: var(--pink-color2);
+    transition: .5s;
+}
+
+.tax-calcu:hover {
+    color: var(--pink-color2);
+}
+
+.tax-calcu::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1.5px;
+    background: var(--pink-color2);
+    transform: scaleX(0);
+    transform-origin: right bottom;
+    transition-duration: .3s;
+    transition: transform .5s ease;
+}
+
+.tax-calcu:hover::after {
+    transform: scaleX(1);
+    transform-origin: left bottom;
+}
+
+/* --- TODO: fix this --- */
+.action-ordering {
+    display: inline-block;
+    padding: .5rem 1.5rem;
+    font-family: var(--font4);
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    overflow: hidden;
+    color: var(--white-color);
+    background: var(--pink-color2);
+    box-shadow: rgba(0, 0, 0, .2);
+    position: relative;
+    transition: .5s;
+}
+
+.action-ordering:hover {
+    color: var(--pink-color2);
+    background: none;
+}
+
+.action-ordering::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    background: rgba(255, 255, 255, .1);
+}
+
+.action-ordering::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .4), transparent);
+    transition: .5s;
+    transition-delay: .5s;
+}
+
+.action-ordering:hover::after {
+    left: 100%;
+}
+
+.action-ordering span {
+    position: absolute;
+    display: block;
+    transition: .5s ease;
+}
+
+.action-ordering span:nth-child(1) {
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--pink-color2);
+}
+
+.action-ordering:hover span:nth-child(1) {
+    width: 100%;
+    transform: translateX(100%);
+}
+
+.action-ordering span:nth-child(3) {
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 1px;
+    background: var(--pink-color2);
+}
+
+.action-ordering:hover span:nth-child(3) {
+    width: 100%;
+    transform: translateX(-100%);
+}
+
+.action-ordering span:nth-child(2) {
+    top: 0;
+    left: 0;
+    width: 1px;
+    height: 0;
+    background: var(--pink-color2);
+}
+
+.action-ordering:hover span:nth-child(2) {
+    height: 100%;
+    transform: translateY(100%);
+}
+
+.action-ordering span:nth-child(4) {
+    bottom: 0;
+    right: 0;
+    width: 1px;
+    height: 0;
+    background: var(--pink-color2);
+}
+
+.action-ordering:hover span:nth-child(4) {
+    height: 100%;
+    transform: translateY(-100%);
 }
