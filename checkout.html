@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html class="no-js">
+<!--<![endif]-->
 
 <head>
     <meta charset="utf-8">
@@ -9,14 +10,13 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="fontawesome-pro-5.13.0/css/all.min.css">
-    <link rel=" stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/normalize.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/exzoom.min.css">
     <link rel="stylesheet" href="css/slick.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body class="preloading">
 
     <!--- Loading page --->
     <div class="load" id="loading">
@@ -110,13 +110,13 @@
                 <div class="search-shopping float-right d-flex">
                     <div class='search-box float-right'>
                         <input type="text" name="" id="input" class="search-txt" placeholder="Bạn muốn tìm gì ?">
-                        <a href="#0" class="search-btn">
+                        <a href="#" class="search-btn">
                             <i class="far fa-search"></i>
                         </a>
                     </div>
 
                     <div class="shopping-bag">
-                        <a href="#0" class="shopping-btn float-right" id="drawerCart">
+                        <a href="#" class="shopping-btn float-right" id="drawerCart">
                             <i class="fad fa-shopping-cart"></i>
                         </a>
                         <div class="bag-cart" id="cart">
@@ -162,8 +162,9 @@
                             <hr>
                             <div class="total">Tạm tính: <span>105.000đ</span></div>
                             <div class="buy">
-                                <a href="#" class="go-cart">Xem giỏ</a>
+                                <a href="cart.html" class="go-cart">Xem giỏ</a>
                                 <a href="#" class="go-cart go-pay">Thanh toán</a>
+
                             </div>
                         </div>
                     </div>
@@ -174,10 +175,12 @@
         <!--- #End menu --->
     </header>
 
+    <!--- Big slide --->
     <section class="cate-banner">
         <div class="bg"></div>
-        <div class="title">Product???</div>
+        <div class="title">Checkout</div>
     </section>
+    <!--- #End big slide --->
 
     <!--- Breadcrumbs --->
     <section class="sect-breadcrumbs">
@@ -187,180 +190,71 @@
                     <a href="#" class="breadcrumbs__link">Trang chủ</a>
                 </li>
                 <li class="breadcrumbs__item">
-                    <a href="#" class="breadcrumbs__link">Bánh sicula</a>
-                </li>
-                <li class="breadcrumbs__item">
-                    <a href="#" class="breadcrumbs__link breadcrumbs__link--active">Bánh sicula siêu ngon</a>
+                    <a href="#" class="breadcrumbs__link breadcrumbs__link--active">Đặt hàng</a>
                 </li>
             </ul>
         </div>
     </section>
     <!--- #End Breadcrumbs --->
 
-    <section class="cate-content prod-content">
+    <section class="cart-details">
         <div class="container">
-            <div class="cate-container">
-                <div class="cate-left">
-                    <div class="prod-wrapper">
-                        <div class="prod-left">
-                            <div class="exzoom" id="exzoom">
-                                <div class="exzoom_img_box">
-                                    <ul class='exzoom_img_ul'>
-                                        <li><img src="images/prod1.jpg" /></li>
-                                        <li><img src="images/prod1.jpg" /></li>
-                                        <li><img src="images/prod1.jpg" /></li>
-                                        <li><img src="images/prod1.jpg" /></li>
-                                    </ul>
-                                </div>
-                                <div class="exzoom_nav"></div>
-                            </div>
-                        </div>
-                        <div class="prod-right">
-                            <div href="#0" class="prod-name">Ô mai tắc</div>
-                            <div class="prod-rating">
-                                <div class="rating">
-                                    <input type="radio" name="star" id="star1"><label for="star1"></label>
-                                    <input type="radio" name="star" id="star2"><label for="star2"></label>
-                                    <input type="radio" name="star" id="star3"><label for="star3"></label>
-                                    <input type="radio" name="star" id="star4"><label for="star4"></label>
-                                    <input type="radio" name="star" id="star5"><label for="star5"></label>
-                                </div>
-                                <a href="#0" class="rating-link">80 đánh giá</a>
-                            </div>
-                            <div class="prod-decription">
-                                Hộp quà được thiết kế rất sang trọng và đẹp mắt, phù hợp làm quà tặng Tết cho người
-                                thân, bạn bè...
-                            </div>
-                            <div class="price">79.000đ</div>
-                            <div class="quantity__card">
-                                <input type="number" name="" id="prod-quantity" value="1" step="1" min="1" max="99"
-                                    readonly>
-                                <a href="#" class="prod-cart">
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                    Mua hàng
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="prod-footer">
-                        <div class="prod-footer__title">
-                            <a href="#prod-footer__content--desc" class="active">Mô tả</a>
-                            <a href="#prod-footer__content--info">Thông tin sản phẩm</a>
-                        </div>
-                        <div class="prod-footer__content">
-                            <div class="prod-footer__content--prod active" id="prod-footer__content--desc">
-                                <p>
-                                    Ô mai tắc là một loại mứt được sử dụng vào các dịp Tết khi cả nhà sum họp gia đình ,
-                                    ăn ô mai phải uống với ngụm trà mới thấm được cái sự ngon của nó, ăn ô mai tắc giúp
-                                    tinh thần ta thoải mái và tỉnh táo.. Vị ô mai hòa dịu bên trong cuốn họng ta rất
-                                    thoải mái và dể chịu ❤️❤️❤️.
-                                </p>
-                            </div>
-                            <div class="prod-footer__content--prod" id="prod-footer__content--info">
-                                <table>
-                                    <tr>
-                                        <th>Cân Nặng</th>
-                                        <td>700 g</td>
-                                    </tr>
-                                    <tr>
-                                        <th>Đơn Vị Tính</th>
-                                        <td>Túi</td>
-                                    </tr>
-                                    <tr>
-                                        <th>Xuất xứ</th>
-                                        <td>Việt Nam</td>
-                                    </tr>
-                                    <tr>
-                                        <th>Khối lượng tịnh</th>
-                                        <td>500g</td>
-                                    </tr>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="cate-right">
-                    <h3 class="cate-right_title">Danh mục sản phẩm</h3>
-                    <hr>
-                    <ul class="cate-nav-list">
-                        <li>
-                            <a href="#">
-                                Bánh
-                                <i class="fal fa-angle-down"></i>
-                            </a>
-                            <ul class="cate-sub-menu">
-                                <li><a href="#">Bánh Quy</a></li>
-                                <li><a href="#">Bánh Gạo</a></li>
-                                <li><a href="#">Bánh Sicula</a></li>
-                                <li><a href="#">Bánh Xốp</a></li>
-                                <li><a href="#">Bánh Khác</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#">
-                                Kẹo
-                                <i class="fal fa-angle-down"></i>
-                            </a>
-                            <ul class="cate-sub-menu">
-                                <li><a href="#">Kẹo Mềm/Dẻo</a></li>
-                                <li><a href="#">Kẹo Cứng</a></li>
-                                <li><a href="#">Kẹo Sicula</a></li>
-                                <li><a href="#">Kẹo Khác</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">Đồ uống</a></li>
-                        <li>
-                            <a href="#">
-                                Thực phẩm khác
-                                <i class="fal fa-angle-down"></i>
-                            </a>
-                            <ul class="cate-sub-menu">
-                                <li><a href="#">Hạt Khô</a></li>
-                                <li><a href="#">Trái Cây Khô</a></li>
-                                <li><a href="#">Rau Củ Khô</a></li>
-                                <li><a href="#">Thực Phẩm Chức Năng</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
+            <div class="cart-details_left">
+                <h3>Chi tiết hóa đơn</h3>
             </div>
-
+            <div class="cart-details_right">
+                <p>Section cart details right</p>
+            </div>
+            
         </div>
-
     </section>
 
-    <div class="container">
-        <hr>
-    </div>
-
-    <section class="about">
+    <section class="your-cart">
         <div class="container">
-            <h3>Nơi bán Ô mai tắc – Việt Nam – 500g ở Nha Trang</h3>
-            <p>
-                Các bạn ở TP. Nha Trang có nhu cầu mua sản phẩm thì có thể đến Omely - Candy & Snack Shop. Tuy nhiên nếu
-                bạn
-                không ở tại TP.Nha Trang thì shop vẫn có dịch vụ SHIP TOÀN QUỐC giúp bạn có thể trải nghiệm sản phẩm Ô
-                mai tắc
-                – Việt Nam – 500g. Omely - Candy & Snack Shop chuyên phân phối sỉ và lẻ các mặt hàng bánh kẹo nhập khẩu.
-                Mọi chi tiết xin vui lòng liên hệ theo thông tin bên dưới website. Xin cám ơn.
-            </p>
-            <div class="about-contact">
-                <div class="about-address">
-                    <i class="fad fa-map-marked-alt"></i>
-                    <span>Địa chỉ:</span> Omely - Candy & Snack Shop
-                    <a href="https://goo.gl/maps/64rwHHi7KXBLg3fn7" title="Đi đến bản đồ">
-                        362/32/4 Lê Hồng Phong, TP. Nha Trang
-                    </a>
-                </div>
-                <div class="about-phone">
-                    <i class="fad fa-mobile-alt"></i><span>Hotline:</span>
-                    <a href="tel:+964226542" title="Gọi đến 0964226542"> 0964.226.542</a>
-                </div>
+            <h3>Đơn hàng của bạn</h3>
+            <table class="tbl-1">
+                <thead>
+                    <tr>
+                        <th>Sản phẩm</th>
+                        <th>Tổng</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            Bột ngũ cốc mè đen Black Grain Mix Powder Damtuh - Hàn Quốc - 240g <br>
+                            x <span>1</span>
+                        </td>
+                        <td class="td-price">105.000đ</td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="tbl-2">
+                <tr>
+                    <th>Tạm tính</th>
+                    <td class="td-price td-1">105.000đ</td>
+                </tr>
+                <tr>
+                    <th>Giao hàng</th>
+                    <td class="td-price td-2">35.000đ</td>
+                </tr>
+                <tr>
+                    <th>Tổng</th>
+                    <td class="td-price td-3">140.000đ</td>
+                </tr>
+            </table>
+            <div class="checkout-footer1">
+                COD - Giao Hàng Trả Tiền <br>
+                Thanh toán khi nhận hàng.
             </div>
-            <img src="images/about-banner.jpg" alt="">
+            <div class="checkout-footer2">
+                Thông tin cá nhân của bạn sẽ được dùng để hỗ trợ trải nghiệm tại website, để quản lý truy cập tài khoản
+                của bạn, và những mục đích khác được mô tả trong chính sách sử dụng
+                <a href="#0">chính sách riêng tư</a>.
+            </div>
+            <a href="#0" class="get-order">
+                Đặt hàng
+            </a>
         </div>
     </section>
 
@@ -391,19 +285,19 @@
                     <div class="content-left">- Giờ mở cửa: T2-CN (9h30 - 21h30)</div>
                     <ul>
                         <li>
-                            <a href="#0">
+                            <a href="#">
                                 <i class="fab fa-facebook-f"></i>
                                 <span class="wrapper-left_tooltip">Facebook</span>
                             </a>
                         </li>
                         <li>
-                            <a href="#0">
+                            <a href="#">
                                 <i class="fab fa-instagram"></i>
                                 <span class="wrapper-left_tooltip">Instagram</span>
                             </a>
                         </li>
                         <li>
-                            <a href="#0">
+                            <a href="#">
                                 <i class="fab fa-twitter"></i>
                                 <span class="wrapper-left_tooltip">Twitter</span>
                             </a>
@@ -430,11 +324,11 @@
                 <div class="wrapper-centerright">
                     <div class="info-heading">Omely shop</div>
                     <ul>
-                        <li><a href="#0">Giới thiệu</a></li>
-                        <li><a href="#0">Sản phẩm</a></li>
-                        <li><a href="#0">Blog</a></li>
-                        <li><a href="#0">Tuyển dụng</a></li>
-                        <li><a href="#0">Chính sách sử dụng</a></li>
+                        <li><a href="#">Giới thiệu</a></li>
+                        <li><a href="#">Sản phẩm</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Tuyển dụng</a></li>
+                        <li><a href="#">Chính sách sử dụng</a></li>
                     </ul>
                 </div>
                 <div class="wrapper-right">
@@ -444,7 +338,7 @@
                             <!-- <span class="wrap-right_img"> -->
                             <img src="images/blog1.jpg" alt="">
                             <!-- </span> -->
-                            <a href="#0">
+                            <a href="#">
                                 2 cách làm kẹo Nougat tại nhà béo núng na
                                 núng nính như mỡ bụng của bạn.
                             </a>
@@ -453,7 +347,7 @@
                             <!-- <span class="wrap-right_img"> -->
                             <img src="images/blog1.jpg" alt="">
                             <!-- </span> -->
-                            <a href="#0">
+                            <a href="#">
                                 2 cách làm kẹo Nougat tại nhà béo núng na
                                 núng nính như mỡ bụng của bạn.
                             </a>
@@ -478,29 +372,7 @@
     <script src="js/number.js"></script>
     <script src="js/slick.min.js"></script>
     <script src="js/wow.min.js"></script>
-    <script src="js/exzoom.min.js"></script>
     <script src="js/script.js"></script>
-
-    <script>
-        $('input[type="number"]').number({
-            'containerClass': 'number-style',
-            'minus': 'number-minus',
-            'plus': 'number-plus',
-            'containerTag': 'div',
-            'btnTag': 'span'
-        });
-
-        $(function () {
-            $("#exzoom").exzoom({
-                "navWidth": 60,
-                "navHeight": 60,
-                "navItemNum": 5,
-                "navItemMargin": 7,
-                "navBorder": 1,
-                "autoPlay": false,
-            });
-        });
-    </script>
 </body>
 
 </html>

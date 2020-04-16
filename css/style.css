@@ -1543,43 +1543,10 @@ body {
 
 /* --- Category.html --- */
 
-/* --- Category banner --- */
+/* --- Breadcrumbs --- */
 
-.cate-banner {
-    width: 100%;
-    height: 12rem;
-    overflow: hidden;
-    text-align: center;
-    position: relative;
-}
-
-.cate-banner .bg {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 0;
-    background: url(https://shopomely.com/wp-content/uploads/2020/01/bg-breadcrumb-3-1.jpg);
-    background-position: 40px -30px;
-    background-size: 100%;
-    background-attachment: fixed;
-}
-
-.cate-banner .title {
-    position: absolute;
-    top: 30%;
-    left: 45%;
-    font-family: var(--font4);
-    font-size: 2rem;
-    letter-spacing: 2px;
-    color: #f1f2f6;
-}
-
-/* --- Category content --- */
-
-.cate-content {
-    padding: 3rem 0;
+.sect-breadcrumbs {
+    padding-top: 2rem;
 }
 
 .breadcrumbs {
@@ -1638,6 +1605,45 @@ body {
 .breadcrumbs__link:hover::after {
     transform: scaleX(1);
     transform-origin: left bottom;
+}
+
+/* --- Category banner --- */
+
+.cate-banner {
+    width: 100%;
+    height: 12rem;
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+}
+
+.cate-banner .bg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    background: url(https://shopomely.com/wp-content/uploads/2020/01/bg-breadcrumb-3-1.jpg);
+    background-position: 40px -30px;
+    background-size: 100%;
+    background-attachment: fixed;
+}
+
+.cate-banner .title {
+    position: absolute;
+    top: 30%;
+    left: 45%;
+    font-family: var(--font4);
+    font-size: 2rem;
+    letter-spacing: 2px;
+    color: #f1f2f6;
+}
+
+/* --- Category content --- */
+
+.cate-content {
+    padding: .5rem 0 3rem;
 }
 
 .cate-content .cate-container {
@@ -2330,13 +2336,13 @@ body {
 .table-cart .table-prod tbody tr {
     border: 2px solid rgba(0, 0, 0, .05);
     box-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
-    border-top: 3px solid var(--pink-color2);
+    border-top: 3px solid var(--pink-color);
 }
 
 .table-cart tbody .column-delete,
 .table-cart tbody .column-price,
 .table-cart tbody .column-total {
-    color: var(--pink-color2)
+    color: var(--pink-color)
 }
 
 .table-cart tbody .column-delete {
@@ -2394,10 +2400,10 @@ body {
     font-family: var(--font4);
     font-size: 1.03rem;
     letter-spacing: 1px;
-    color: var(--pink-color2);
+    color: var(--pink-color);
     width: fit-content;
     padding: .5rem 1.8rem;
-    border: 2px solid var(--pink-color2);
+    border: 2px solid var(--pink-color);
     margin-top: 1.5rem;
     position: relative;
     z-index: 1;
@@ -2416,7 +2422,7 @@ body {
     top: 0;
     width: 0;
     height: 100%;
-    background: var(--pink-color2);
+    background: var(--pink-color);
     z-index: -1;
     transform: skewX(45deg);
     transition: .7s;
@@ -2449,7 +2455,6 @@ body {
     font-size: 1.6rem;
     letter-spacing: 2px;
     color: #22a6b3;
-    width: fit-content;
     position: relative;
     padding: .3rem 0;
 }
@@ -2459,7 +2464,7 @@ body {
     position: absolute;
     left: 0;
     bottom: 0;
-    width: 10rem;
+    width: 67%;
     height: 2px;
     background: currentColor;
 }
@@ -2521,7 +2526,6 @@ body {
     transform-origin: left bottom;
 }
 
-/* --- TODO: fix this --- */
 .action-ordering {
     display: inline-block;
     padding: .5rem 1.5rem;
@@ -2529,98 +2533,191 @@ body {
     font-size: 1.1rem;
     letter-spacing: 1px;
     overflow: hidden;
-    color: var(--white-color);
-    background: var(--pink-color2);
-    box-shadow: rgba(0, 0, 0, .2);
+    color: var(--pink-color);
+    border: 2px solid var(--pink-color);
     position: relative;
     transition: .5s;
 }
 
 .action-ordering:hover {
-    color: var(--pink-color2);
-    background: none;
+    color: var(--white-color)
 }
 
 .action-ordering::before {
     content: "";
     position: absolute;
-    left: 0;
+    left: -11%;
     top: 0;
-    width: 50%;
+    width: 0;
     height: 100%;
-    background: rgba(255, 255, 255, .1);
+    background: var(--pink-color);
+    z-index: -1;
+    transform: skewX(45deg);
+    transition: .7s;
 }
 
-.action-ordering::after {
+.action-ordering:hover::before {
+    width: 150%;
+}
+
+/* --- Checkout.html --- */
+.cart-details .container {
+    display: flex;
+}
+
+.cart-details .container div {
+    flex: 1
+}
+
+.your-cart {
+    padding: 3rem 0;
+}
+
+.cart-details h3,
+.your-cart h3 {
+    margin-bottom: 1rem;
+    font-family: var(--font4);
+    font-size: 1.8rem;
+    color: #6a89cc;
+    letter-spacing: 1.2px;
+    position: relative;
+}
+
+.cart-details h3::before,
+.your-cart h3::before {
     content: "";
     position: absolute;
     left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .4), transparent);
-    transition: .5s;
-    transition-delay: .5s;
+    bottom: -.6rem;
+    width: 7rem;
+    height: 3px;
+    background: var(--pink-color);
+    z-index: 1;
 }
 
-.action-ordering:hover::after {
-    left: 100%;
-}
-
-.action-ordering span {
+.cart-details h3::after,
+.your-cart h3::after {
+    content: "";
     position: absolute;
-    display: block;
-    transition: .5s ease;
-}
-
-.action-ordering span:nth-child(1) {
-    top: 0;
     left: 0;
-    width: 0;
-    height: 1px;
-    background: var(--pink-color2);
-}
-
-.action-ordering:hover span:nth-child(1) {
+    bottom: -.6rem;
     width: 100%;
-    transform: translateX(100%);
+    height: 3px;
+    background: var(--gray-light-color);
+    z-index: -1;
 }
 
-.action-ordering span:nth-child(3) {
-    bottom: 0;
-    right: 0;
-    width: 0;
-    height: 1px;
-    background: var(--pink-color2);
-}
-
-.action-ordering:hover span:nth-child(3) {
+.your-cart table {
     width: 100%;
-    transform: translateX(-100%);
 }
 
-.action-ordering span:nth-child(2) {
-    top: 0;
+.your-cart .tbl-1 th {
+    padding: 1rem 2rem;
+    font-family: var(--font2);
+    font-size: 1.15rem;
+    color: #00BCD4;
+}
+
+.your-cart .tbl-1 td {
+    padding: 2rem;
+    font-family: var(--font2);
+    color: var(--font-color)
+}
+
+.your-cart .tbl-1 tbody tr {
+    border: 2px solid rgba(0, 0, 0, .05);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
+    border-top: 3px solid var(--pink-color);
+}
+
+.your-cart .td-price {
+    font-family: var(--font4) !important;
+    font-size: 1rem;
+    letter-spacing: 1.2px !important;
+    color: var(--red-color) !important;
+}
+
+.your-cart .tbl-2 {
+    margin-top: 1rem;
+}
+
+.your-cart .tbl-2 th {
+    color: #2c3e50;
+}
+
+.your-cart .tbl-2 tr {
+    line-height: 2rem;
+}
+
+.your-cart .tbl-2 td {
+    text-align: right;
+    color: var(--red-color)
+}
+
+.your-cart .tbl-2 .td-2 {
+    font-size: .97rem;
+}
+
+.your-cart .tbl-2 .td-3 {
+    font-size: 1.1rem;
+}
+
+.checkout-footer1 {
+    padding: 1.5rem 0;
+    line-height: 1.7rem;
+    font-family: var(--font2);
+    color: #34495e;
+}
+
+.checkout-footer2 {
+    font-family: var(--font2);
+    color: #34495e;
+}
+
+.checkout-footer2 a {
+    color: var(--pink-color2);
+    display: inline-block;
+    position: relative;
+    transition: .5s;
+}
+
+.checkout-footer2 a:hover {
+    color: var(--pink-color2)
+}
+
+.checkout-footer2 a::after {
+    content: "";
+    position: absolute;
+    bottom: 3px;
     left: 0;
-    width: 1px;
-    height: 0;
+    width: 100%;
+    height: 2px;
     background: var(--pink-color2);
+    transform: scaleX(1);
+    transform-origin: left bottom;
+    transition-duration: .3s;
+    transition: transform .5s ease;
 }
 
-.action-ordering:hover span:nth-child(2) {
-    height: 100%;
-    transform: translateY(100%);
+.checkout-footer2 a:hover::after {
+    transform: scaleX(0);
+    transform-origin: right bottom;
 }
 
-.action-ordering span:nth-child(4) {
-    bottom: 0;
-    right: 0;
-    width: 1px;
-    height: 0;
+.your-cart .get-order {
+    display: inline-block;
+    margin-top: 1rem;
+    font-family: var(--font4);
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    color: var(--white-color);
+    padding: .5rem 2.5rem;
     background: var(--pink-color2);
+    border-radius: 30px;
+    transition: .7s;
 }
 
-.action-ordering:hover span:nth-child(4) {
-    height: 100%;
-    transform: translateY(-100%);
+.your-cart .get-order:hover {
+    background: var(--pink-neon-color);
+    box-shadow: 0 0 30px var(--pink-neon-color);
 }

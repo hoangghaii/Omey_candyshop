@@ -62,7 +62,7 @@
                 <div class="menu-left">
                     <ul class="nav-list">
                         <li>
-                            <a href="#" class="about">Bánh
+                            <a href="#" class="">Bánh
                                 <i class="fal fa-angle-down"></i>
                             </a>
                             <ul class="sub-menu">
@@ -74,7 +74,7 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="#" class="course">Kẹo
+                            <a href="#" class="">Kẹo
                                 <i class="fal fa-angle-down"></i>
                             </a>
                             <ul class="sub-menu">
@@ -109,14 +109,63 @@
                 <div class="search-shopping float-right d-flex">
                     <div class='search-box float-right'>
                         <input type="text" name="" id="input" class="search-txt" placeholder="Bạn muốn tìm gì ?">
-                        <a href="#" class="search-btn">
+                        <a href="#0" class="search-btn">
                             <i class="far fa-search"></i>
                         </a>
                     </div>
 
-                    <a href="#" class="shopping-btn float-right">
-                        <i class="fad fa-shopping-cart"></i>
-                    </a>
+                    <div class="shopping-bag">
+                        <a href="#0" class="shopping-btn float-right" id="drawerCart">
+                            <i class="fad fa-shopping-cart"></i>
+                        </a>
+                        <div class="bag-cart" id="cart">
+                            <div class="bag-cart-header">
+                                Giỏ hàng của bạn
+                            </div>
+                            <div class="cart-prod">
+                                <div class="cart-prod__img">
+                                    <img src="images/prod1.jpg" alt="">
+                                </div>
+                                <div class="cart-prod__text">
+                                    <div class="cart-prod__name">
+                                        Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                    </div>
+                                    <div class="cart-prod__info">
+                                        <div class="cart-prod__quantity">
+                                            <span class="weight">240g</span>
+                                            - 1 x
+                                            <span class="cart-prod__1price">105.000đ</span>
+                                        </div>
+                                        <a href="" class="cart-prod__delete"><i class="fad fa-trash"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cart-prod">
+                                <div class="cart-prod__img">
+                                    <img src="images/prod1.jpg" alt="">
+                                </div>
+                                <div class="cart-prod__text">
+                                    <div class="cart-prod__name">
+                                        Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                    </div>
+                                    <div class="cart-prod__info">
+                                        <div class="cart-prod__quantity">
+                                            <span class="weight">240g</span>
+                                            - 1 x
+                                            <span class="cart-prod__1price">105.000đ</span>
+                                        </div>
+                                        <a href="" class="cart-prod__delete"><i class="fad fa-trash"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="total">Tạm tính: <span>105.000đ</span></div>
+                            <div class="buy">
+                                <a href="#" class="go-cart">Xem giỏ</a>
+                                <a href="#" class="go-cart go-pay">Thanh toán</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <!--- #End search and shopping bag container --->
             </div>
@@ -129,19 +178,23 @@
         <div class="title">Category???</div>
     </section>
 
-    <section class="cate-content">
+    <!--- Breadcrumbs --->
+    <section class="sect-breadcrumbs">
         <div class="container">
             <ul class="breadcrumbs">
                 <li class="breadcrumbs__item">
                     <a href="#" class="breadcrumbs__link">Trang chủ</a>
                 </li>
                 <li class="breadcrumbs__item">
-                    <a href="#" class="breadcrumbs__link">Bánh sicula</a>
-                </li>
-                <li class="breadcrumbs__item">
-                    <a href="#" class="breadcrumbs__link breadcrumbs__link--active">Bánh sicula siêu ngon</a>
+                    <a href="#" class="breadcrumbs__link breadcrumbs__link--active">Bánh sicula</a>
                 </li>
             </ul>
+        </div>
+    </section>
+    <!--- #End Breadcrumbs --->
+
+    <section class="cate-content">
+        <div class="container">
             <div class="cate-header">
                 <i class="fas fa-quote-left"></i>
                 Shop bánh kẹo Omely – Candy & Snack Shop với rất nhiều loại bánh thơm ngon,
