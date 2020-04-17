@@ -12,8 +12,11 @@
     <link rel="stylesheet" href="fontawesome-pro-5.13.0/css/all.min.css">
     <link rel="stylesheet" href="css/normalize.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/select2.min.css">
+    <!-- <link rel="stylesheet" href="css/select2.css"> -->
     <link rel="stylesheet" href="css/slick.css">
     <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="css/bear.css"> -->
 </head>
 
 <body class="preloading">
@@ -201,11 +204,132 @@
         <div class="container">
             <div class="cart-details_left">
                 <h3>Chi tiết hóa đơn</h3>
+                <form>
+                    <fieldset class="">
+
+                        <div class="floating-label">
+                            <input class="float_input" type="text" name="inputName" id="inputName"
+                                placeholder="Họ và tên*">
+                            <label class="form-label" for="inputName">Họ và tên*</label>
+                        </div>
+
+                        <div class="floating-label">
+                            <input class="float_input" type="text" name="inputPhone" id="inputPhone"
+                                placeholder="Số điện thoại*">
+                            <label class="form-label" for="inputPhone">Số điện thoại*</label>
+                        </div>
+
+                        <div class="floating-label">
+                            <input class="float_input" type="email" name="inputMail" id="inputMail"
+                                placeholder="Địa chỉ email (tùy chọn)">
+                            <label class="form-label" for="inputMail">Địa chỉ email (tùy chọn)</label>
+                        </div>
+
+                        <div class="selected">
+                            <select class="js-select js-select-1" name="">
+                                <option value="" disabled selected></option>
+                                <option value="AL">Alabama</option>
+                                <option value="WY">Wyoming</option>
+                                <option value="AL">Alabama</option>
+                                <option value="WY">Wyoming</option>
+                                <option value="AL">Alabama</option>
+                                <option value="WY">Wyoming</option>
+                                <option value="AL">Alabama</option>
+                                <option value="WY">Wyoming</option>
+                                <option value="AL">Alabama</option>
+                                <option value="WY">Wyoming</option>
+                                <option value="AL">Alabama</option>
+                                <option value="WY">Wyoming</option>
+                                <option value="AL">Alabama</option>
+                                <option value="WY">Wyoming</option>
+                                <option value="AL">Alabama</option>
+                                <option value="WY">Wyoming</option>
+                                <option value="AL">Alabama</option>
+                                <option value="WY">Wyoming</option>
+                                <option value="AL">Alabama</option>
+                                <option value="WY">Wyoming</option>
+                                <option value="AL">Alabama</option>
+                                <option value="WY">Wyoming</option>
+                                <option value="AL">Alabama</option>
+                                <option value="WY">Wyoming</option>
+                            </select>
+                        </div>
+
+                        <div class="selected">
+                            <select class="js-select js-select-2" name="">
+                                <option value="" disabled selected></option>
+                                <option value="AL">Alabama</option>
+                                <option value="WY">Wyoming</option>
+                                <option value="AL">Alabama</option>
+                                <option value="WY">Wyoming</option>
+                                <option value="AL">Alabama</option>
+                                <option value="WY">Wyoming</option>
+                                <option value="AL">Alabama</option>
+                                <option value="WY">Wyoming</option>
+                                <option value="AL">Alabama</option>
+                                <option value="WY">Wyoming</option>
+                                <option value="AL">Alabama</option>
+                                <option value="WY">Wyoming</option>
+                                <option value="AL">Alabama</option>
+                                <option value="WY">Wyoming</option>
+                                <option value="AL">Alabama</option>
+                                <option value="WY">Wyoming</option>
+                                <option value="AL">Alabama</option>
+                                <option value="WY">Wyoming</option>
+                                <option value="AL">Alabama</option>
+                                <option value="WY">Wyoming</option>
+                                <option value="AL">Alabama</option>
+                                <option value="WY">Wyoming</option>
+                                <option value="AL">Alabama</option>
+                                <option value="WY">Wyoming</option>
+                            </select>
+                        </div>
+
+                        <div class="selected">
+                            <select class="js-select js-select-3" name="">
+                                <option value="" disabled selected></option>
+                                <option value="AL">Alabama</option>
+                                <option value="WY">Wyoming</option>
+                                <option value="AL">Alabama</option>
+                                <option value="WY">Wyoming</option>
+                                <option value="AL">Alabama</option>
+                                <option value="WY">Wyoming</option>
+                                <option value="AL">Alabama</option>
+                                <option value="WY">Wyoming</option>
+                                <option value="AL">Alabama</option>
+                                <option value="WY">Wyoming</option>
+                                <option value="AL">Alabama</option>
+                                <option value="WY">Wyoming</option>
+                                <option value="AL">Alabama</option>
+                                <option value="WY">Wyoming</option>
+                                <option value="AL">Alabama</option>
+                                <option value="WY">Wyoming</option>
+                                <option value="AL">Alabama</option>
+                                <option value="WY">Wyoming</option>
+                                <option value="AL">Alabama</option>
+                                <option value="WY">Wyoming</option>
+                                <option value="AL">Alabama</option>
+                                <option value="WY">Wyoming</option>
+                                <option value="AL">Alabama</option>
+                                <option value="WY">Wyoming</option>
+                            </select>
+                        </div>
+
+                        <div class="floating-label">
+                            <input class="float_input" type="text" name="inputAddress" id="inputAddress"
+                                placeholder="Địa chỉ*">
+                            <label class="form-label" for="inputAddress">Địa chỉ*</label>
+                        </div>
+                    </fieldset>
+                </form>
+                <!-- TODO: create an account?? -->
             </div>
             <div class="cart-details_right">
-                <p>Section cart details right</p>
+
+                
+                
             </div>
-            
+
         </div>
     </section>
 
@@ -373,6 +497,19 @@
     <script src="js/slick.min.js"></script>
     <script src="js/wow.min.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/select2.min.js"></script>
+    <!-- <script src="js/bear.js"></script> -->
+    <script>
+        $('.js-select-1').select2({
+            placeholder: 'Tỉnh/Thành phố*'
+        });
+        $('.js-select-2').select2({
+            placeholder: 'Quận/Huyện*'
+        });
+        $('.js-select-3').select2({
+            placeholder: 'Xã/Phường*'
+        });
+    </script>
 </body>
 
 </html>
