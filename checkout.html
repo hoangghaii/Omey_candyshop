@@ -16,7 +16,7 @@
     <!-- <link rel="stylesheet" href="css/select2.css"> -->
     <link rel="stylesheet" href="css/slick.css">
     <link rel="stylesheet" href="css/style.css">
-    <!-- <link rel="stylesheet" href="css/bear.css"> -->
+
 </head>
 
 <body class="preloading">
@@ -222,7 +222,7 @@
                         <div class="floating-label">
                             <input class="float_input" type="email" name="inputMail" id="inputMail"
                                 placeholder="Địa chỉ email (tùy chọn)">
-                            <label class="form-label" for="inputMail">Địa chỉ email (tùy chọn)</label>
+                            <label class="form-label" for="inputMail">Địa chỉ email</label>
                         </div>
 
                         <div class="selected">
@@ -320,14 +320,26 @@
                                 placeholder="Địa chỉ*">
                             <label class="form-label" for="inputAddress">Địa chỉ*</label>
                         </div>
+
+                        <div class="checkboxs">
+                            <label for="checkboxNewsletter">
+                                <input type="checkbox" name="checkboxNewsletter" id="checkboxNewsletter">
+                                <span class="label-text">Đăng ký nhận bản tin</span>
+                            </label>
+                            <label for="checkboxCreacc">
+                                <input type="checkbox" name="checkboxCreacc" id="checkboxCreacc">
+                                <span class="label-text">Create an account?</span>
+                            </label>
+                        </div>
                     </fieldset>
                 </form>
-                <!-- TODO: create an account?? -->
             </div>
-            <div class="cart-details_right">
 
-                
-                
+            <div class="cart-details_right">
+                <div class="box-images">
+                    <div class="front-image"></div>
+                    <div class="back-image"></div>
+                </div>
             </div>
 
         </div>
@@ -489,6 +501,13 @@
             </div>
         </div>
 
+        <!--- Night mode --->
+        <label class="nightmode-wrapper" for="nightMode" id="nightmode-wrapper">
+            <input type="checkbox" id="nightMode">
+            <span class="icon-mode"></span>
+        </label>
+        <!--- #End night mode --->
+
         <div class="gotop">TOP</div>
     </footer>
 
@@ -498,7 +517,7 @@
     <script src="js/wow.min.js"></script>
     <script src="js/script.js"></script>
     <script src="js/select2.min.js"></script>
-    <!-- <script src="js/bear.js"></script> -->
+
     <script>
         $('.js-select-1').select2({
             placeholder: 'Tỉnh/Thành phố*'

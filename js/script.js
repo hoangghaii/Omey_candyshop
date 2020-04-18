@@ -1,5 +1,42 @@
 $(function () {
 
+    /** --- Night mode --- */
+    var checkbox = $('input[type="checkbox"]#checkbox');
+    var htmlElement = $('html');
+
+    const currentTheme = localStorage.getItem('theme');
+    if (currentTheme) {
+        htmlElement.attr('data-theme', currentTheme);
+
+        if (currentTheme === 'dark') {
+            checkbox.attr('checked', 'true');
+        }
+    }
+
+    function switchTheme() {
+        var status = checkbox.prop('checked');
+        $('#label_on_off').text("");
+        if (status === true) {
+            $('#label_on_off').fadeIn("fast", function () {
+                $(this).text("ON").css("color", "#ddd");
+                $(this).fadeOut("slow");
+            });
+            // document.documentElement.setAttribute('data-theme', 'dark'); //mã lệnh javascript
+            htmlElement.attr('data-theme', 'dark');
+            localStorage.setItem('theme', 'dark'); //add this
+        } else {
+            $('#label_on_off').fadeIn("fast", function () {
+                $(this).text("OFF").css("color", "#ffb200");
+                $(this).fadeOut("slow");
+            });
+            // document.documentElement.setAttribute('data-theme', 'light'); //mã lệnh javascript
+            htmlElement.attr('data-theme', 'light');
+            localStorage.setItem('theme', 'light'); //add this
+        }
+    }
+
+    checkbox.on('change', switchTheme);
+
     /** --- Loading page ---  */
     $(window).on('load', function () {
         $('body').removeClass('preloading');
