@@ -167,8 +167,9 @@ $(function () {
     var drawerCart = document.getElementById("drawerCart");
     var cart = document.getElementById('cart');
     drawerCart.addEventListener("click", function (e) {
+        this.classList.toggle("clicked");
         cart.classList.toggle("show");
         e.preventDefault();
-    })
+    });
 
 });

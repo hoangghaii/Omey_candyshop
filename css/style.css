@@ -49,6 +49,14 @@
     width: 0;
 }
 
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
 .scroll-container {
     position: fixed;
     top: 0;
@@ -141,17 +149,20 @@ ul {
     padding: 0;
 }
 
+button,
 input,
-input:active,
-input:focus,
 textarea {
-    outline: 0 !important;
-    outline-style: none !important;
-    outline-width: 0 !important;
+    border: none;
+    outline: 0;
+    outline-style: none;
+    outline-width: 0;
+    background: none;
 }
 
 body {
+    width: 100%;
     max-width: calc(100% - 5px);
+    height: 100vh;
     cursor: default;
     scroll-behavior: smooth;
 }
@@ -437,7 +448,19 @@ body {
     box-shadow: 0 0 10px currentColor;
 }
 
+.shopping-btn.clicked::before {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px currentColor;
+}
+
 .shopping-btn:hover {
+    background: var(--white-color);
+    color: #f67575;
+    box-shadow: 0 0 5px #f67575;
+    text-shadow: 0 0 5px #f67575;
+}
+
+.shopping-btn.clicked {
     background: var(--white-color);
     color: #f67575;
     box-shadow: 0 0 5px #f67575;
@@ -1253,6 +1276,7 @@ body {
     appearance: none;
     width: 45vw;
     padding: .5rem 1.5rem;
+    background: var(--white-color);
     border: 1px solid #EC407A;
     border-right: none;
     border-radius: 10px 0 0 10px;
@@ -2887,7 +2911,95 @@ select.js-select {
     color: var(--pink-color2);
 }
 
+/* --- Login.html --- */
 
+.login {
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    overflow: hidden;
+    position: relative;
+    width: 900px;
+    height: 500px;
+    background: var(--white-color);
+    margin: 0 auto;
+    border: 1px solid black;
+}
+
+.form {
+    border: 1px solid black;
+    position: relative;
+    width: 640px;
+    height: 100%;
+    padding: 50px 30px;
+    transition: transform 1.2s ease-in-out;
+}
+
+.form h2 {
+    width: 100%;
+    font-size: 30px;
+    text-align: center;
+
+}
+
+.form label {
+    display: block;
+    width: 260px;
+    margin: 25px auto;
+    text-align: center;
+}
+
+.form label span {
+    font-size: 14px;
+    font-weight: 600;
+    color: #505f75;
+    text-transform: uppercase;
+}
+
+.form label input {
+    display: block;
+    width: 100%;
+    margin-top: 5px;
+    font-size: 16px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid rgba(109, 93, 93, .4);
+    text-align: center;
+}
+
+.form button {
+    display: block;
+    margin: 0 auto;
+    width: 260px;
+    height: 36px;
+    border-radius: 30px;
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    font-weight: 600;
+    background: linear-gradient(var(--linear-color2));
+    transition: background .7s;
+}
+
+.form button:hover {
+    background: linear-gradient(var(--linear-color3));
+}
+
+.form .fotgot-pass {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    color: #0c0101;
+    cursor: pointer;
+    transition: color .7s;
+}
+
+.form .fotgot-pass:hover {
+    color: var(--red-color)
+}
 
 /* --- Night mode --- */
 
