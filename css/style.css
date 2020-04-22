@@ -2912,22 +2912,21 @@ select.js-select {
 }
 
 /* --- Login.html --- */
+.wrapper-login {
+    background: linear-gradient(var(--linear-color2));
+    padding: 2rem 0;
+}
 
 .login {
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
     overflow: hidden;
     position: relative;
     width: 900px;
-    height: 500px;
+    height: auto;
     background: var(--white-color);
     margin: 0 auto;
-    border: 1px solid black;
 }
 
 .form {
-    border: 1px solid black;
     position: relative;
     width: 640px;
     height: 100%;
@@ -2999,6 +2998,156 @@ select.js-select {
 
 .form .fotgot-pass:hover {
     color: var(--red-color)
+}
+
+.social-media {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.social-media ul li {
+    display: inline-block;
+    cursor: pointer;
+    margin: 25px 15px;
+}
+
+.social-media img {
+    width: 40px;
+    height: auto;
+}
+
+.sub-cont {
+    overflow: hidden;
+    text-align: center;
+    position: absolute;
+    left: 640px;
+    top: 0;
+    width: 900px;
+    height: 100%;
+    padding-left: 260px;
+    background: #fff;
+    transition: transform 1.2s ease-in-out;
+}
+
+.sub-cont .img {
+    overflow: hidden;
+    z-index: 2;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 260px;
+    height: 100%;
+    padding-top: 360px;
+}
+
+.sub-cont .img::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 900px;
+    height: 100%;
+    background-image: url("../images/login-banner.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: transform 1.2s ease-in-out;
+}
+
+.sub-cont .img::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .3);
+}
+
+.sub-cont .img-text {
+    z-index: 2;
+    position: absolute;
+    left: 0;
+    top: 50px;
+    padding: 0 20px;
+    text-align: center;
+    color: #fff;
+    transition: transform 1.2 ease-in-out;
+}
+
+.sub-cont .img-text h2 {
+    margin-bottom: 10px;
+    font-weight: normal;
+}
+
+.sub-cont .img-text p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.sign-in {
+    padding-top: 65px;
+    transition-timing-function: ease-out;
+}
+
+.login .s-sign-up .sign-in {
+    transition-timing-function: ease-in-out;
+    transition-duration: 1.2s;
+    transform: translate3d(640px, 0, 0);
+}
+
+.sub-cont .img-btn {
+    overflow: hidden;
+    z-index: 2;
+    position: relative;
+    width: 100px;
+    height: 36px;
+    margin: 0 auto;
+    background: transparent;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.sub-cont .img-btn::after {
+    content: "";
+    z-index: 2;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #fff;
+    border-radius: 30px;
+}
+
+.sub-cont .img-btn span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    transition: transform 1.2s;
+}
+
+.sub-cont .img-btn span.m-in {
+    transform: translateY(-72px);
+}
+
+.sub-cont .img-btn span.m-up {
+    transform: translateY(0);
+}
+
+.sign-up {
+    transform: translate3d(-900px, 0, 0);
+}
+
+.login .s-sign-up .sign-up {
+    transform: translate3d(0, 0, 0);
 }
 
 /* --- Night mode --- */

@@ -65,6 +65,15 @@ $(function () {
         }
     });
 
+     /** --- Drawer Cart --- */
+     var drawerCart = document.getElementById("drawerCart");
+     var cart = document.getElementById('cart');
+     drawerCart.addEventListener("click", function (e) {
+         this.classList.toggle("clicked");
+         cart.classList.toggle("show");
+         e.preventDefault();
+     });
+    
     /** --- move background --- */
     var lFollowX = 0,
         lFollowY = 0,
@@ -161,15 +170,6 @@ $(function () {
         $('html,body').animate({
             scrollTop: 0
         }, 1000);
-    });
-
-    /** --- Drawer Cart --- */
-    var drawerCart = document.getElementById("drawerCart");
-    var cart = document.getElementById('cart');
-    drawerCart.addEventListener("click", function (e) {
-        this.classList.toggle("clicked");
-        cart.classList.toggle("show");
-        e.preventDefault();
     });
 
 });
