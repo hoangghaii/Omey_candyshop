@@ -214,11 +214,11 @@ body {
 .registration .signIn::before {
     content: attr(data-text);
     position: absolute;
-    top: -4px;
+    top: -5px;
     left: 0;
     width: 0;
     height: 30px;
-    background: linear-gradient(var(--linear-color3));
+    background: linear-gradient(var(--linear-color9));
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -2912,10 +2912,6 @@ select.js-select {
 }
 
 /* --- Login.html --- */
-.wrapper-login {
-    background: linear-gradient(var(--linear-color2));
-    padding: 2rem 0;
-}
 
 .login {
     overflow: hidden;
@@ -2923,7 +2919,8 @@ select.js-select {
     width: 900px;
     height: auto;
     background: var(--white-color);
-    margin: 0 auto;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, .5);
+    margin: 2rem auto;
 }
 
 .form {
@@ -2936,9 +2933,11 @@ select.js-select {
 
 .form h2 {
     width: 100%;
+    font-family: var(--font4);
+    letter-spacing: 1px;
     font-size: 30px;
+    color: #00BCD4;
     text-align: center;
-
 }
 
 .form label {
@@ -2949,6 +2948,7 @@ select.js-select {
 }
 
 .form label span {
+    font-family: var(--font2);
     font-size: 14px;
     font-weight: 600;
     color: #505f75;
@@ -2958,9 +2958,12 @@ select.js-select {
 .form label input {
     display: block;
     width: 100%;
-    margin-top: 5px;
+    margin-top: 8px;
+    font-family: var(--font2);
     font-size: 16px;
-    padding-bottom: 5px;
+    font-weight: 500;
+    color: #607D8B;
+    padding-bottom: 1px;
     border-bottom: 1px solid rgba(109, 93, 93, .4);
     text-align: center;
 }
@@ -2971,7 +2974,8 @@ select.js-select {
     width: 260px;
     height: 36px;
     border-radius: 30px;
-    color: #fff;
+    color: var(--white-color);
+    font-family: var(--font2);
     font-size: 15px;
     cursor: pointer;
     margin-top: 40px;
@@ -2979,7 +2983,7 @@ select.js-select {
     text-transform: uppercase;
     font-weight: 600;
     background: linear-gradient(var(--linear-color2));
-    transition: background .7s;
+    transition: background 1.2s;
 }
 
 .form button:hover {
@@ -2989,9 +2993,11 @@ select.js-select {
 .form .fotgot-pass {
     margin-top: 15px;
     text-align: center;
-    font-size: 14px;
+    font-family: var(--font2);
+    font-size: 14.8px;
+    letter-spacing: .5px;
     font-weight: 600;
-    color: #0c0101;
+    color: #34495e;
     cursor: pointer;
     transition: color .7s;
 }
@@ -3026,7 +3032,7 @@ select.js-select {
     width: 900px;
     height: 100%;
     padding-left: 260px;
-    background: #fff;
+    background: var(--white-color);
     transition: transform 1.2s ease-in-out;
 }
 
@@ -3038,7 +3044,6 @@ select.js-select {
     top: 0;
     width: 260px;
     height: 100%;
-    padding-top: 360px;
 }
 
 .sub-cont .img::before {
@@ -3048,10 +3053,24 @@ select.js-select {
     top: 0;
     width: 900px;
     height: 100%;
-    background-image: url("../images/login-banner.jpg");
+    background-image: url("../images/login-banner2.jpg");
+    background-position: 100px -55px;
     background-size: cover;
     background-repeat: no-repeat;
-    transition: transform 1.2s ease-in-out;
+}
+
+.sub-cont:hover .img::before {
+    animation: roll 8s linear infinite;
+}
+
+@keyframes roll {
+    0% {
+        background-position: 100px -55px;
+    }
+
+    100% {
+        background-position: -100px -55px;
+    }
 }
 
 .sub-cont .img::after {
@@ -3061,93 +3080,20 @@ select.js-select {
     top: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, .3);
+    background: rgba(0, 0, 0, .2);
 }
 
 .sub-cont .img-text {
     z-index: 2;
     position: absolute;
     left: 0;
-    top: 50px;
+    top: 42%;
     padding: 0 20px;
     text-align: center;
+    font-family: var(--font4);
+    font-size: 1.5rem;
+    letter-spacing: 1px;
     color: #fff;
-    transition: transform 1.2 ease-in-out;
-}
-
-.sub-cont .img-text h2 {
-    margin-bottom: 10px;
-    font-weight: normal;
-}
-
-.sub-cont .img-text p {
-    font-size: 14px;
-    line-height: 1.5;
-}
-
-.sign-in {
-    padding-top: 65px;
-    transition-timing-function: ease-out;
-}
-
-.login .s-sign-up .sign-in {
-    transition-timing-function: ease-in-out;
-    transition-duration: 1.2s;
-    transform: translate3d(640px, 0, 0);
-}
-
-.sub-cont .img-btn {
-    overflow: hidden;
-    z-index: 2;
-    position: relative;
-    width: 100px;
-    height: 36px;
-    margin: 0 auto;
-    background: transparent;
-    color: #fff;
-    text-transform: uppercase;
-    font-size: 15px;
-    cursor: pointer;
-}
-
-.sub-cont .img-btn::after {
-    content: "";
-    z-index: 2;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    border: 2px solid #fff;
-    border-radius: 30px;
-}
-
-.sub-cont .img-btn span {
-    position: absolute;
-    left: 0;
-    top: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    transition: transform 1.2s;
-}
-
-.sub-cont .img-btn span.m-in {
-    transform: translateY(-72px);
-}
-
-.sub-cont .img-btn span.m-up {
-    transform: translateY(0);
-}
-
-.sign-up {
-    transform: translate3d(-900px, 0, 0);
-}
-
-.login .s-sign-up .sign-up {
-    transform: translate3d(0, 0, 0);
 }
 
 /* --- Night mode --- */
