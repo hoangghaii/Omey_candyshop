@@ -58,22 +58,24 @@ $(function () {
             $('.menu').addClass('menuscroll');
             $('.sub-menu').addClass('scroll');
             $('.bag-cart').addClass('scroll');
+            $('.search-shopping').addClass('scroll');
         } else if (vitri < 180) {
             $('.menu').removeClass('menuscroll');
             $('.sub-menu').removeClass('scroll');
             $('.bag-cart').removeClass('scroll');
+            $('.search-shopping').removeClass('scroll');
         }
     });
 
-     /** --- Drawer Cart --- */
-     var drawerCart = document.getElementById("drawerCart");
-     var cart = document.getElementById('cart');
-     drawerCart.addEventListener("click", function (e) {
-         this.classList.toggle("clicked");
-         cart.classList.toggle("show");
-         e.preventDefault();
-     });
-    
+    /** --- Drawer Cart --- */
+    var drawerCart = document.getElementById("drawerCart");
+    var cart = document.getElementById('cart');
+    drawerCart.addEventListener("click", function (e) {
+        this.classList.toggle("clicked");
+        cart.classList.toggle("show");
+        e.preventDefault();
+    });
+
     /** --- move background --- */
     var lFollowX = 0,
         lFollowY = 0,
