@@ -1,0 +1,637 @@
+/* Extract from W3.CSS 4.13 June 2019 by Jan Egil and Borge Refsnes */
+/* Was edited by me */
+html {
+    box-sizing: border-box
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit
+}
+
+html {
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%
+}
+
+body {
+    margin: 0
+}
+
+main {
+    display: block
+}
+
+h1 {
+    font-size: 2em;
+    margin: .67em 0
+}
+
+hr {
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible
+}
+
+pre {
+    font-family: monospace, monospace;
+    font-size: 1em
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    background-color: transparent;
+    text-decoration: none;
+}
+
+abbr[title] {
+    border-bottom: none;
+    text-decoration: underline;
+    -webkit-text-decoration: underline dotted;
+    text-decoration: underline dotted
+}
+
+b,
+strong {
+    font-weight: bolder
+}
+
+code,
+kbd,
+samp {
+    font-family: monospace, monospace;
+    font-size: 1em
+}
+
+small {
+    font-size: 80%
+}
+
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline
+}
+
+sub {
+    bottom: -.25em
+}
+
+sup {
+    top: -.5em
+}
+
+img {
+    border-style: none
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0
+}
+
+button,
+input {
+    overflow: visible
+}
+
+button,
+select {
+    text-transform: none
+}
+
+[type=button],
+[type=reset],
+[type=submit],
+button {
+    -webkit-appearance: button
+}
+
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner,
+button::-moz-focus-inner {
+    border-style: none;
+    padding: 0
+}
+
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring,
+button:-moz-focusring {
+    outline: 1px dotted ButtonText
+}
+
+fieldset {
+    padding: .35em .75em .625em
+}
+
+legend {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    color: inherit;
+    display: table;
+    max-width: 100%;
+    padding: 0;
+    white-space: normal
+}
+
+progress {
+    vertical-align: baseline
+}
+
+textarea {
+    overflow: auto
+}
+
+[type=checkbox],
+[type=radio] {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0
+}
+
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+    height: auto
+}
+
+[type=search] {
+    -webkit-appearance: textfield;
+    outline-offset: -2px
+}
+
+[type=search]::-webkit-search-decoration {
+    -webkit-appearance: none
+}
+
+::-webkit-file-upload-button {
+    -webkit-appearance: button;
+    font: inherit
+}
+
+details {
+    display: block
+}
+
+summary {
+    display: list-item
+}
+
+template {
+    display: none
+}
+
+[hidden] {
+    display: none
+}
+
+.table,
+.table-all {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    display: table
+}
+
+.table td,
+.table th,
+.table-all td,
+.table-all th {
+    padding: 8px 8px;
+    display: table-cell;
+    text-align: left;
+    vertical-align: top
+}
+
+.table th:first-child,
+.table td:first-child,
+.table-all th:first-child,
+.table-all td:first-child {
+    padding-left: 16px
+}
+
+.btn,
+.button {
+    border: none;
+    display: inline-block;
+    padding: 8px 16px;
+    vertical-align: middle;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    background-color: inherit;
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap
+}
+
+.btn:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+}
+
+.btn,
+.button {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+.disabled,
+.btn:disabled,
+.button:disabled {
+    cursor: not-allowed;
+    opacity: 0.3
+}
+
+.disabled *,
+:disabled * {
+    pointer-events: none
+}
+
+.btn.disabled:hover,
+.btn:disabled:hover {
+    box-shadow: none
+}
+
+.sidebar {
+    height: 100%;
+    width: 200px;
+    background-color: #fff;
+    position: fixed !important;
+    z-index: 1;
+    overflow: auto
+}
+
+.container,
+.container-fluid {
+    width: 100%;
+    height: auto;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.container {
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
+
+.container:after,
+.container:before,
+.clearfix:after,
+.clearfix:before {
+    content: "";
+    display: table;
+    clear: both
+}
+
+.col {
+    float: left;
+    width: 100%;
+}
+
+.col.s1 {
+    width: 8.33333%;
+}
+
+.col.s2 {
+    width: 16.66666%
+}
+
+.col.s3 {
+    width: 24.99999%
+}
+
+.col.s4 {
+    width: 33.33333%
+}
+
+.col.s5 {
+    width: 41.66666%
+}
+
+.col.s6 {
+    width: 49.99999%
+}
+
+.col.s7 {
+    width: 58.33333%
+}
+
+.col.s8 {
+    width: 66.66666%
+}
+
+.col.s9 {
+    width: 74.99999%
+}
+
+.col.s10 {
+    width: 83.33333%
+}
+
+.col.s11 {
+    width: 91.66666%
+}
+
+.col.s12 {
+    width: 99.99999%
+}
+
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+
+@media (min-width:601px) {
+    .col.m1 {
+        width: 8.33333%
+    }
+
+    .col.m2 {
+        width: 16.66666%
+    }
+
+    .col.m3 {
+        width: 24.99999%
+    }
+
+    .col.m4 {
+        width: 33.33333%
+    }
+
+    .col.m5 {
+        width: 41.66666%
+    }
+
+    .col.m6 {
+        width: 49.99999%
+    }
+
+    .col.m7 {
+        width: 58.33333%
+    }
+
+    .col.m8 {
+        width: 66.66666%
+    }
+
+    .col.m9 {
+        width: 74.99999%
+    }
+
+    .col.m10 {
+        width: 83.33333%
+    }
+
+    .col.m11 {
+        width: 91.66666%
+    }
+
+    .col.m12 {
+        width: 99.99999%
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media (min-width:993px) {
+    .container {
+        max-width: 960px;
+    }
+
+    .col.l1 {
+        width: 8.33333%
+    }
+
+    .col.l2 {
+        width: 16.66666%
+    }
+
+    .col.l3 {
+        width: 24.99999%
+    }
+
+    .col.l4 {
+        width: 33.33333%
+    }
+
+    .col.l5 {
+        width: 41.66666%
+    }
+
+    .col.l6 {
+        width: 49.99999%
+    }
+
+    .col.l7 {
+        width: 58.33333%
+    }
+
+    .col.l8 {
+        width: 66.66666%
+    }
+
+    .col.l9 {
+        width: 74.99999%
+    }
+
+    .col.l10 {
+        width: 83.33333%
+    }
+
+    .col.l11 {
+        width: 91.66666%
+    }
+
+    .col.l12 {
+        width: 99.99999%
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+.cell-row {
+    display: table;
+    width: 100%
+}
+
+.cell {
+    display: table-cell
+}
+
+.cell-top {
+    vertical-align: top
+}
+
+.cell-middle {
+    vertical-align: middle
+}
+
+.cell-bottom {
+    vertical-align: bottom
+}
+
+.overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2
+}
+
+.middle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%)
+}
+
+.middle-left {
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translate(0%, -50%);
+    -ms-transform: translate(-0%, -50%)
+}
+
+.middle-right {
+    position: absolute;
+    top: 50%;
+    right: 0%;
+    transform: translate(0%, -50%);
+    -ms-transform: translate(0%, -50%)
+}
+
+.top-middle {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, 0%);
+    -ms-transform: translate(-50%, 0%)
+}
+
+.bottom-middle {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 0%);
+    -ms-transform: translate(-50%, 0%)
+}
+
+.panel {
+    padding: 0.01em 16px
+}
+
+.panel {
+    margin-top: 16px;
+    margin-bottom: 16px
+}
+
+.spin {
+    animation: spin 2s infinite linear
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg)
+    }
+
+    100% {
+        transform: rotate(359deg)
+    }
+}
+
+.fading {
+    animation: fading 10s infinite
+}
+
+@keyframes fading {
+    0% {
+        opacity: 0
+    }
+
+    50% {
+        opacity: 1
+    }
+
+    100% {
+        opacity: 0
+    }
+}
+
+.padding-small {
+    padding: 4px 8px !important
+}
+
+.padding {
+    padding: 8px 16px !important
+}
+
+.padding-large {
+    padding: 12px 24px !important
+}
+
+.padding-16 {
+    padding-top: 16px !important;
+    padding-bottom: 16px !important
+}
+
+.padding-24 {
+    padding-top: 24px !important;
+    padding-bottom: 24px !important
+}
+
+.padding-32 {
+    padding-top: 32px !important;
+    padding-bottom: 32px !important
+}
+
+.padding-48 {
+    padding-top: 48px !important;
+    padding-bottom: 48px !important
+}
+
+.padding-64 {
+    padding-top: 64px !important;
+    padding-bottom: 64px !important
+}
+
+.float-left {
+    float: left !important
+}
+
+.float-right {
+    float: right !important
+}

@@ -64,15 +64,24 @@
     margin: 0 auto;
 }
 
+.container:after,
+.container:before,
+.container-fluid:after,
+.container-fluid:before {
+    content: "";
+    display: table;
+    clear: both
+}
+
 img {
     width: 100%;
     height: auto;
 }
 
 .clearfix::after {
-    display: block;
-    clear: both;
     content: "";
+    clear: both;
+    display: table;
 }
 
 table th {
@@ -382,19 +391,14 @@ body {
 }
 
 .nav-list li:hover>.sub-menu.scroll {
-    top: 5.1rem;
+    top: 5rem;
 }
 
 .search-shopping {
     float: right;
     display: flex;
     position: relative;
-    right: -3rem;
     top: 1.6rem;
-}
-
-.search-shopping.scroll {
-    right: 0;
 }
 
 .search-box {
@@ -529,7 +533,7 @@ body {
 }
 
 .bag-cart.scroll {
-    top: 3.7rem;
+    top: 3.55rem;
 }
 
 .bag-cart-header {
@@ -1330,7 +1334,7 @@ body {
 .input_getinfo input {
     appearance: none;
     width: 45vw;
-    height: 1.6rem;
+    height: 2.8rem;
     padding: .5rem 1.5rem;
     background: var(--white-color);
     border: 1px solid #EC407A;
@@ -1402,6 +1406,12 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr .6fr 1fr;
     gap: 2rem;
+}
+
+.info .container::before,
+.info .container::after {
+    display: none;
+    clear: none;
 }
 
 .info .content-left {
@@ -1757,7 +1767,7 @@ body {
 }
 
 .cate-left hr {
-    margin-right: 2.8rem;
+    margin: 10px 2.6rem 10px 0;
 }
 
 .cate-sort label {
@@ -2673,8 +2683,8 @@ body {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    width: 96%;
-    height: 1.5rem;
+    width: 100%;
+    height: 2.4rem;
     padding: 6px 10px;
     border: 1px solid #AAAAAA;
     border-radius: 5px;
@@ -2898,7 +2908,7 @@ select.js-select {
 .checkout-footer2 a::after {
     content: "";
     position: absolute;
-    bottom: 2px;
+    bottom: 0;
     left: 0;
     width: 100%;
     height: 2px;

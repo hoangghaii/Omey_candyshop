@@ -58,12 +58,10 @@ $(function () {
             $('.menu').addClass('menuscroll');
             $('.sub-menu').addClass('scroll');
             $('.bag-cart').addClass('scroll');
-            $('.search-shopping').addClass('scroll');
         } else if (vitri < 180) {
             $('.menu').removeClass('menuscroll');
             $('.sub-menu').removeClass('scroll');
             $('.bag-cart').removeClass('scroll');
-            $('.search-shopping').removeClass('scroll');
         }
     });
 
