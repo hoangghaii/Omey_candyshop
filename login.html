@@ -11,7 +11,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="fontawesome-pro-5.13.0/css/all.min.css">
     <link rel="stylesheet" href="css/normalize.min.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/select2.min.css">
     <!-- <link rel="stylesheet" href="css/select2.css"> -->
     <link rel="stylesheet" href="css/slick.css">
@@ -37,7 +36,7 @@
         <!--- Contact --->
         <div class="contact-container">
             <div class="container">
-                <div class="contact-header float-left">
+                <div class="contact-header">
                     <i class="far fa-phone-rotary"><span class=" phone"> 0964.226.542</span></i>
                     <i class="far fa-envelope-open-text"><span class="gmail"> nguyenhoanghai861@gmail.com</span></i>
                     <i class="fab fa-facebook-f"></i>
@@ -45,7 +44,7 @@
                     <i class="fab fa-twitter"></i>
                     <i class="fab fa-google-plus-g"></i>
                 </div>
-                <div class="registration float-right">
+                <div class="registration">
                     <a href="login.html" class="signIn" data-text="SignIn">SignIn</a>
                 </div>
             </div>
@@ -56,8 +55,8 @@
         <div class="menu">
             <div class="container">
                 <!--- Logo --->
-                <div class="logo float-left">
-                    <a href="index.html"><img src="images/Omely-logo-withtext.png" alt="" class="img-fluid" /></a>
+                <div class="logo">
+                    <a href="index.html"><img src="images/Omely-logo-withtext.png" alt="" /></a>
                 </div>
                 <!--- #End logo --->
 
@@ -106,19 +105,18 @@
                         </li>
                     </ul>
                 </div>
-                <!--- #End menu and submenu --->
+                <!-- #End menu and submenu -->
 
-                <!--- Search and shopping bag container --->
-                <div class="search-shopping float-right d-flex">
-                    <div class='search-box float-right'>
+                <!-- Search and shopping bag container -->
+                <div class="search-shopping">
+                    <div class='search-box'>
                         <input type="text" name="" id="input" class="search-txt" placeholder="Bạn muốn tìm gì ?">
-                        <a href="#" class="search-btn">
+                        <a href="#0" class="search-btn">
                             <i class="far fa-search"></i>
                         </a>
                     </div>
-
                     <div class="shopping-bag">
-                        <a href="#" class="shopping-btn float-right" id="drawerCart">
+                        <a href="#0" class="shopping-btn float-right" id="drawerCart">
                             <i class="fad fa-shopping-cart"></i>
                         </a>
                         <div class="bag-cart" id="cart">
@@ -164,9 +162,8 @@
                             <hr>
                             <div class="total">Tạm tính: <span>105.000đ</span></div>
                             <div class="buy">
-                                <a href="cart.html" class="go-cart">Xem giỏ</a>
+                                <a href="#" class="go-cart">Xem giỏ</a>
                                 <a href="#" class="go-cart go-pay">Thanh toán</a>
-
                             </div>
                         </div>
                     </div>
@@ -182,12 +179,12 @@
             <div class="form sign-in">
                 <h2>Sign In</h2>
                 <label>
-                    <span>Email Address</span>
-                    <input type="text" name="email">
+                    <span>Full Name</span>
+                    <input type="text" name="username">
                 </label>
                 <label>
-                    <span>Password</span>
-                    <input type="text" name="password">
+                    <span>Telephone Number</span>
+                    <input type="text" name="phone">
                 </label>
                 <button class="submit" type="button">Sign In</button>
                 <p class="fotgot-pass">Forgot Password ?</p>

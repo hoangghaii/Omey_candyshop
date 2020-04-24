@@ -51,6 +51,7 @@
 
 .container {
     width: 100%;
+    height: auto;
     max-width: 1140px;
     padding-right: 1rem;
     padding-left: 1rem;
@@ -59,6 +60,7 @@
 }
 
 .container-fluid {
+    height: auto;
     margin: 0 auto;
 }
 
@@ -71,6 +73,10 @@ img {
     display: block;
     clear: both;
     content: "";
+}
+
+table th {
+    text-align: left;
 }
 
 .scroll-container {
@@ -370,7 +376,7 @@ body {
 }
 
 .nav-list li:hover>.sub-menu {
-    top: 5.4rem;
+    top: 5.46rem;
     opacity: 1;
     visibility: visible;
 }
@@ -886,11 +892,16 @@ body {
     display: block;
 }
 
+.product-flex {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: .9rem;
+    grid-template-columns: repeat(3, 1fr);
+    /* gap: .9rem; */
 }
 
 .__1prod {
@@ -1384,6 +1395,7 @@ body {
     letter-spacing: 1.6px;
     background: #2D2D2D;
     color: var(--white-color);
+    line-height: 1.5rem;
 }
 
 .info .container {
@@ -1396,8 +1408,8 @@ body {
     margin-bottom: 1rem;
 }
 
-.info img {
-    width: 130px;
+.info .wrapper-left img {
+    width: 140px;
     height: auto;
     margin: 1rem 0;
 }
@@ -1509,16 +1521,10 @@ body {
     margin-bottom: 1.5rem;
 }
 
-.wrap-right_img {
-    width: 85px;
-    height: 60px;
-    background: var(--pink-color2);
-    /* position: relative; */
-}
 
 .wrapper-right img {
-    width: 80px;
-    height: 80px;
+    width: 90px;
+    height: 90px;
     margin: auto 10px auto 0;
     /* transform: scale(1);
     transition: transform .7s; */
@@ -1596,31 +1602,6 @@ body {
     transform: scale(1);
 }
 
-/* --- Go top --- */
-
-.gotop {
-    display: inline-block;
-    position: fixed;
-    right: 30px;
-    bottom: 20px;
-    font-size: 1.5rem;
-    background: linear-gradient(var(--linear-color9));
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    cursor: pointer;
-}
-
-.gotop::after {
-    position: absolute;
-    content: "";
-    bottom: 0;
-    left: -5px;
-    width: 120%;
-    height: 2px;
-    background: linear-gradient(var(--linear-color9));
-}
-
 /* --- Category.html --- */
 
 /* --- Breadcrumbs --- */
@@ -1674,8 +1655,7 @@ body {
     background: #747d8c;
     transform: scaleX(0);
     transform-origin: right bottom;
-    transition-duration: .3s;
-    transition: all .5s ease;
+    transition: transform .4s;
 }
 
 .breadcrumbs__link--active::after {
@@ -1776,6 +1756,10 @@ body {
     height: 100%;
 }
 
+.cate-left hr {
+    margin-right: 2.8rem;
+}
+
 .cate-sort label {
     font-family: var(--font4);
     color: var(--font-color);
@@ -1803,12 +1787,12 @@ body {
 }
 
 .cate-right .cate-right_title {
+    display: inline;
     font-family: var(--font4);
+    font-size: 1.6rem;
     letter-spacing: 2px;
-    width: fit-content;
     position: relative;
     cursor: pointer;
-    padding-bottom: 4px;
     background: linear-gradient(var(--linear-color9));
     -webkit-background-clip: text;
     background-clip: text;
@@ -1828,13 +1812,17 @@ body {
     background-clip: text;
     -webkit-text-fill-color: transparent;
     transform: scaleX(0);
-    transform-origin: bottom left;
-    transition: all .5s;
+    transform-origin: right bottom;
+    transition: transform .5s;
 }
 
 .cate-right .cate-right_title:hover::after {
     transform: scaleX(1);
-    transform-origin: bottom right;
+    transform-origin: left bottom;
+}
+
+.cate-right hr {
+    margin-top: .74rem;
 }
 
 .cate-nav-list {
@@ -1888,7 +1876,7 @@ body {
     opacity: 0;
     visibility: hidden;
     transform: scale(0);
-    transition: all .5s;
+    transition: transform .5s;
 }
 
 .cate-sub-menu a:hover {
@@ -1904,7 +1892,7 @@ body {
 /* --- Product.html --- */
 
 /* --- Product wrapper --- */
-/* --- TODO: UI padding --- */
+
 .cate-content.prod-content {
     padding: 3rem 0 1rem;
 }
@@ -1915,6 +1903,14 @@ body {
 
 .prod-left {
     display: flex;
+}
+
+.prod-left .exzoom_img_box,
+.prod-left .exzoom_img_ul_outer,
+.prod-left .exzoom_img_ul li,
+.prod-left .exzoom_zoom_outer {
+    width: 300px !important;
+    height: 300px !important;
 }
 
 .prod-footer {
@@ -1956,11 +1952,10 @@ body {
     z-index: -1;
     transform: translate(-50%, -50%) rotate(-45deg);
     transition: all .5s;
-    transition-delay: .15s;
 }
 
 .prod-footer__title a:hover::before {
-    height: 500%;
+    height: 550%;
 }
 
 .prod-footer__title a.active {
@@ -2060,7 +2055,6 @@ body {
 
 .rating-link {
     font-weight: 600;
-    margin-bottom: 7px;
     margin-left: 1rem;
     display: inline-block;
     position: relative;
@@ -2069,15 +2063,14 @@ body {
 .rating-link::after {
     content: "";
     position: absolute;
-    bottom: 3px;
+    bottom: 0;
     left: 0;
     width: 100%;
-    height: 1.5px;
+    height: 2px;
     background: var(--font-color);
     transform: scaleX(0);
     transform-origin: right bottom;
-    transition-duration: .3s;
-    transition: all .5s ease;
+    transition: transform .5s;
 }
 
 .rating-link:hover::after {
@@ -2363,15 +2356,14 @@ body {
 .about-contact a::after {
     content: "";
     position: absolute;
-    bottom: 0px;
+    bottom: -2px;
     left: 0;
     width: 100%;
     height: 2px;
     background: #fd79a8;
     transform: scaleX(0);
     transform-origin: right bottom;
-    transition-duration: .3s;
-    transition: all .5s ease;
+    transition: transform .5s;
 }
 
 .about-contact a:hover::after {
@@ -2524,10 +2516,10 @@ body {
 .order-heading,
 .tax-heading {
     font-family: var(--font2);
-    font-size: .8rem;
+    font-size: 1rem;
     text-transform: uppercase;
     color: var(--pink-color2);
-    padding: .3rem 0;
+    padding: .2rem 0;
 }
 
 .ordering h3 {
@@ -2536,7 +2528,7 @@ body {
     letter-spacing: 2px;
     color: #22a6b3;
     position: relative;
-    padding: .3rem 0;
+    padding: .2rem 0;
 }
 
 .ordering h3::after {
@@ -2555,7 +2547,7 @@ body {
 }
 
 .order-calcu tr {
-    line-height: 3rem;
+    line-height: 2rem;
 }
 
 .order-calcu th {
@@ -2590,15 +2582,14 @@ body {
 .tax-calcu::after {
     content: "";
     position: absolute;
-    bottom: 0;
+    bottom: -2px;
     left: 0;
     width: 100%;
-    height: 1.5px;
+    height: 2px;
     background: var(--pink-color2);
     transform: scaleX(0);
     transform-origin: right bottom;
-    transition-duration: .3s;
-    transition: all .5s ease;
+    transition: transform .5s;
 }
 
 .tax-calcu:hover::after {
@@ -2655,9 +2646,13 @@ body {
     margin-right: 20px;
 }
 
+.cart-details_left form {
+    padding-top: .02px;
+}
+
 .floating-label {
     position: relative;
-    margin: 2.2rem 0;
+    margin: 2rem 0;
 }
 
 .floating-label .form-label {
@@ -2678,7 +2673,8 @@ body {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    width: 100%;
+    width: 96%;
+    height: 1.5rem;
     padding: 6px 10px;
     border: 1px solid #AAAAAA;
     border-radius: 5px;
@@ -2855,11 +2851,12 @@ select.js-select {
 }
 
 .your-cart .tbl-2 th {
+    font-size: 1.05rem;
     color: #2c3e50;
 }
 
 .your-cart .tbl-2 tr {
-    line-height: 2rem;
+    line-height: 1.5rem;
 }
 
 .your-cart .tbl-2 td {
@@ -2891,7 +2888,7 @@ select.js-select {
     color: var(--pink-color2);
     display: inline-block;
     position: relative;
-    transition: all .5s;
+    transition: transform .5s;
 }
 
 .checkout-footer2 a:hover {
@@ -2901,15 +2898,14 @@ select.js-select {
 .checkout-footer2 a::after {
     content: "";
     position: absolute;
-    bottom: 3px;
+    bottom: 2px;
     left: 0;
     width: 100%;
     height: 2px;
     background: var(--pink-color2);
     transform: scaleX(1);
     transform-origin: left bottom;
-    transition-duration: .3s;
-    transition: all .5s ease;
+    transition: transform .5s;
 }
 
 .checkout-footer2 a:hover::after {
@@ -3135,8 +3131,34 @@ select.js-select {
     text-align: center;
     font-family: var(--font4);
     font-size: 1.5rem;
-    letter-spacing: 1px;
+    letter-spacing: 1.5px;
     color: #fff;
+}
+
+/* --- Go top --- */
+
+.gotop {
+    display: inline-block;
+    position: fixed;
+    right: 30px;
+    bottom: 20px;
+    font-family: var(--font2);
+    font-size: 1.5rem;
+    background: linear-gradient(var(--linear-color9));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+}
+
+.gotop::after {
+    position: absolute;
+    content: "";
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(var(--linear-color9));
 }
 
 /* --- Night mode --- */
