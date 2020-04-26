@@ -34,17 +34,6 @@
     --font2: 'Roboto', sans-serif;
 }
 
-[data-theme="dark"] {
-    --primary-color: #9A97F3;
-    --secondary-color: #818cab;
-    --font-color: #e1e1ff;
-    --bg-color: #161625;
-    --heading-color: #818cab;
-    --switch-border-color-light: #ffb200;
-    --switch-border-color-dark: #ddd;
-
-}
-
 ::-webkit-scrollbar {
     width: 0;
 }
@@ -3135,43 +3124,4 @@ select.js-select {
     width: 100%;
     height: 2px;
     background: linear-gradient(var(--linear-color9));
-}
-
-/* --- Night mode --- */
-
-.nightmode-wrapper {
-    position: fixed;
-    bottom: 1rem;
-    left: 1.5rem;
-    z-index: 1000;
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    background: var(--gray-light-color);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, .3);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.nightmode-wrapper input[type="checkbox"] {
-    display: none;
-}
-
-.nightmode-wrapper .icon-mode {
-    cursor: pointer;
-    position: absolute;
-    top: 7.2px;
-    left: 7.2px;
-
-}
-
-.nightmode-wrapper .icon-mode:before {
-    content: url("../images/sun.png");
-    display: inline-block;
-    transition: all .5s;
-}
-
-.nightmode-wrapper input[type="checkbox"]:checked+.icon-mode::before {
-    content: url("../images/moon.png");
 }
