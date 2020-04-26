@@ -404,7 +404,6 @@ table th {
 .container,
 .container-fluid {
     width: 100%;
-    height: auto;
     margin-right: auto;
     margin-left: auto;
 }
@@ -656,7 +655,7 @@ table th {
     -ms-transform: translate(0%, -50%)
 }
 
-.top-middle {
+.middle-top {
     position: absolute;
     left: 50%;
     top: 0;
@@ -664,7 +663,7 @@ table th {
     -ms-transform: translate(-50%, 0%)
 }
 
-.bottom-middle {
+.middle-bottom {
     position: absolute;
     left: 50%;
     bottom: 0;
