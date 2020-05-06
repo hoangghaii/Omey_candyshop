@@ -330,7 +330,7 @@ body {
 }
 
 .nav-list li:hover>.sub-menu.scroll {
-    top: 5rem;
+    top: 5.3rem;
 }
 
 .search-shopping {
@@ -485,7 +485,7 @@ body {
 .bag-cart.show {
     opacity: 1;
     visibility: visible;
-    top: 4.2rem;
+    top: 4.25rem;
 }
 
 .bag-cart.scroll {

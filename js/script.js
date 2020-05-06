@@ -17,11 +17,11 @@ $(function () {
     /** --- menu scroll effect --- */
     $(window).scroll(function () {
         var vitri = $('html').scrollTop();
-        if (vitri >= 180) {
+        if (vitri >= 1) {
             $('.menu').addClass('menuscroll');
             $('.sub-menu').addClass('scroll');
             $('.bag-cart').addClass('scroll');
-        } else if (vitri < 180) {
+        } else if (vitri < 1) {
             $('.menu').removeClass('menuscroll');
             $('.sub-menu').removeClass('scroll');
             $('.bag-cart').removeClass('scroll');
